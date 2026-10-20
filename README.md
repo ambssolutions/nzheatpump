@@ -15,6 +15,17 @@ Preview locally from this folder: `python3 -m http.server`, then open http://loc
 | `privacy.html` | Privacy Act 2020 statement |
 | `404.html` | Not-found page |
 
+## Concepts
+Open `/concepts` for the gallery (noindex). Each concept is one self-contained page that shares `assets/`:
+
+| # | Concept | Type · Style | Motion |
+|---|---|---|---|
+| 01 | Thermal | Premium dark · Thermal camera lens over the house, drag-to-compare room | Interactive, highly animated |
+| 02 | Comfort Dial | Warm and homely · Thermostat dial warms the whole page, heat pump air particles | Interactive, animated |
+| 03 | Live Wire | Editorial trade · The current site at `/` | Animated |
+
+When the client picks one, it becomes the site and the gallery is removed.
+
 ## Files
 - `assets/business.js`: the one place for phone, email, address, hours, licence line, reviews and the form endpoint. Empty values stay hidden on the site.
 - `assets/site.css`, `assets/site.js`: shared styles and behaviour (menu, quick bar, folds, form, sizing demo, reveals).

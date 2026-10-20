@@ -506,3 +506,53 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-
 }
 .readout .mono{color:var(--accent-hi)}
 .ticks.plus li::before{width:12px;height:12px;top:17px;border:0;transform:none;background:linear-gradient(var(--accent),var(--accent)) center/12px 2px no-repeat,linear-gradient(var(--accent),var(--accent)) center/2px 12px no-repeat}
+
+/* Centred layout (AMBS owner rule): headings, intros, card content, panels and footer centred;
+   tick lists stay left-aligned inside a centred block. */
+.ticks{display:table;margin-left:auto;margin-right:auto}
+.copy{text-align:center;align-items:center}
+.copy .tlink{align-self:center}
+.demo>div:last-child{text-align:center}
+.demo .seg{margin-left:auto;margin-right:auto}
+.sizer-in{text-align:center}
+.sz-field legend{width:100%;text-align:center}
+.sz-range{max-width:440px;margin:0 auto}
+.chips{justify-content:center}
+.card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.card .vig{order:-1;width:140px;margin-bottom:4px}
+.card .no{min-width:0}
+@media (max-width:900px){.card .vig{display:none}}
+.hh{grid-template-columns:1fr;text-align:center;max-width:820px}
+.therm{justify-content:center}
+.hh .acts{justify-content:center!important}
+.map-grid{grid-template-columns:1fr;text-align:center;max-width:620px;margin:0 auto}
+.map{max-width:520px;margin:0 auto}
+.split{text-align:center}
+.split h2,.split h3{text-align:center}
+.scope>div{text-align:center}
+.aside{text-align:center}
+.facts{display:inline-block;text-align:center}
+.ftr .cols{text-align:center;grid-template-columns:repeat(3,1fr);max-width:760px;margin-left:auto;margin-right:auto}
+.ftr .cols>div{text-align:center}
+@media (max-width:640px){.ftr .cols{grid-template-columns:1fr 1fr}}
+.demo-say{margin-left:auto;margin-right:auto;max-width:46ch}
+
+/* Clean-up pass: one button system, no overlapping heading lines, tighter section rhythm */
+:root{--radius:10px;--sec:clamp(64px,7.5vw,104px)}
+h1 .w,h1 .w>i{display:inline}
+.phero h1{line-height:1.1}
+.hero h1{line-height:1.1}
+.btn,.in-nav,.seg,.chips span,.ctrl button,.icon-btn,.qbar a,input,select,textarea{border-radius:var(--radius)}
+.btn{min-height:54px;padding:0 28px;font-size:16.5px;letter-spacing:0;font-weight:600}
+.btn.ghost{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}
+.seg{overflow:hidden}
+.seg button{min-height:46px}
+.chips span{min-height:44px;padding:0 16px}
+.ctrl button{width:46px;height:46px}
+.hdr .btn{min-height:44px;border-radius:var(--radius)}
+.tlink{text-underline-offset:6px}
+.acts{gap:14px 24px}
+.getin .acts .btn{min-width:180px}
+.card .no{line-height:1;margin-bottom:6px}
+.stack{gap:22px}
+@media (max-width:600px){.qbar a{border-radius:0}}
