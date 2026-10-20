@@ -17,17 +17,17 @@
 @font-face{font-family:"Inter";font-weight:400 600;font-display:swap;src:url(../../assets/fonts/inter-latin.woff2) format("woff2")}
 :root{
   --bg:#07080d;--s1:#0f111a;--s2:#161925;--line:rgba(255,255,255,.1);--ink:#f3f3f6;--muted:#a9adbd;
-  --ink2:#d6d8e2;--dim:#5d6072;--hdr:rgba(7,8,13,.96);--c2:#141322;--c3:#1b1424;--c4:#22140f;--chip-on:#fff;--chip-on-ink:#0b0b10;--track:rgba(255,255,255,.12);--needle:#fff;--qbar:#1b1e2b;--map-ink:#e7e8ef;--pt:#fff;--ghost:rgba(255,255,255,.06);--ghost-line:rgba(255,255,255,.22);--focus:#ffb23a;--hover:rgba(255,255,255,.07);
-  --grad:linear-gradient(90deg,#a68bff 0%,#ff6fb0 35%,#ff8a1c 70%,#ffd23a 100%);
-  --hot:#ff6a2b;--warm:#ffb23a;--cool:#5b3df5;--violet:#b51fb8;
-  --thermal:linear-gradient(90deg,#3b1ccf 0%,#b51fb8 28%,#ff3d4f 52%,#ff8a1c 74%,#ffd23a 100%);
+  --ink2:#d6d8e2;--dim:#5d6072;--hdr:rgba(7,8,13,.96);--c2:#111a27;--c3:#131d2b;--c4:#1a1c22;--chip-on:#fff;--chip-on-ink:#0b0b10;--track:rgba(255,255,255,.12);--needle:#fff;--qbar:#1b1e2b;--map-ink:#e7e8ef;--pt:#fff;--ghost:rgba(255,255,255,.06);--ghost-line:rgba(255,255,255,.22);--focus:#f0c49b;--hover:rgba(255,255,255,.07);
+  --grad:linear-gradient(90deg,#a9c6dc 0%,#e6dccb 45%,#f0c49b 72%,#eba273 100%);
+  --hot:#e98c5a;--warm:#f0c49b;--cool:#5a86a6;--violet:#2e5577;
+  --thermal:linear-gradient(90deg,#2e5577 0%,#5a86a6 26%,#a9bfc8 48%,#f0c49b 74%,#eba273 100%);
   --display:"Space Grotesk",system-ui,sans-serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
   --pad:clamp(20px,5.5vw,80px);--hh:72px;--ease:cubic-bezier(.2,.7,.2,1);
 }
 html[data-theme=light]{color-scheme:light;
   --bg:#f6f5f2;--s1:#ffffff;--s2:#f0eef4;--line:rgba(18,19,26,.12);--ink:#14151c;--muted:#53576a;
-  --ink2:#2c2f3b;--dim:#7a7e8f;--hdr:rgba(246,245,242,.97);--c2:#f7f4ff;--c3:#fdf2f7;--c4:#fff4ec;--chip-on:#14151c;--chip-on-ink:#fff;--track:rgba(18,19,26,.1);--needle:#14151c;--qbar:#14151c;--map-ink:#2c2f3b;--pt:#14151c;--ghost:rgba(18,19,26,.04);--ghost-line:rgba(18,19,26,.28);--focus:#c2410c;--hover:rgba(18,19,26,.06);
-  --grad:linear-gradient(90deg,#5b3df5 0%,#c42a86 35%,#d9540c 70%,#b98100 100%)}
+  --ink2:#2c2f3b;--dim:#7a7e8f;--hdr:rgba(246,245,242,.97);--c2:#f1f5f8;--c3:#f4f6f7;--c4:#fbf3ec;--chip-on:#14151c;--chip-on-ink:#fff;--track:rgba(18,19,26,.1);--needle:#14151c;--qbar:#14151c;--map-ink:#2c2f3b;--pt:#14151c;--ghost:rgba(18,19,26,.04);--ghost-line:rgba(18,19,26,.28);--focus:#9c5532;--hover:rgba(18,19,26,.06);
+  --grad:linear-gradient(90deg,#2e5577 0%,#4f7896 40%,#b06a42 78%,#9c5532 100%)}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-padding-top:calc(var(--hh) + 16px);-webkit-text-size-adjust:100%;color-scheme:dark}
 body{transition:background-color .6s,color .6s}
@@ -93,7 +93,7 @@ html[data-theme=light] .theme{--ti:url("data:image/svg+xml,%3Csvg xmlns='http://
 @media (min-width:901px){.nav .btn{display:none}}
 
 /* hero: a thermal lens over the house */
-.hero,.cta{--ink:#f3f3f6;--muted:#c3c6d4;--ghost:rgba(255,255,255,.06);--ghost-line:rgba(255,255,255,.22);--focus:#ffb23a;--grad:linear-gradient(90deg,#a68bff 0%,#ff6fb0 35%,#ff8a1c 70%,#ffd23a 100%);color:var(--ink)}
+.hero,.cta{--ink:#f3f3f6;--muted:#c3c6d4;--ghost:rgba(255,255,255,.06);--ghost-line:rgba(255,255,255,.22);--focus:#f0c49b;--grad:linear-gradient(90deg,#a9c6dc 0%,#e6dccb 45%,#f0c49b 72%,#eba273 100%);color:var(--ink)}
 .hero{position:relative;height:min(100svh,980px);min-height:620px;overflow:hidden;display:grid;place-items:center;text-align:center;background:#0b0c14;touch-action:pan-y}
 .hero .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 60%}
 .hero .th{position:absolute;inset:0;clip-path:circle(0 at 50% 50%);will-change:clip-path}
@@ -146,7 +146,7 @@ html[data-theme=light] .theme{--ti:url("data:image/svg+xml,%3Csvg xmlns='http://
 /* services: spotlight cards with a thermal edge */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .svc{position:relative;padding:34px 28px 30px;border-radius:22px;background:var(--s1);border:1px solid var(--line);text-align:center;overflow:hidden;isolation:isolate;transition:transform .7s var(--ease),border-color .7s}
-.svc::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(320px circle at var(--mx,50%) var(--my,0%),rgba(255,106,43,.16),transparent 60%);opacity:0;transition:opacity .6s}
+.svc::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(320px circle at var(--mx,50%) var(--my,0%),rgba(235,162,115,.14),transparent 60%);opacity:0;transition:opacity .6s}
 .svc::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:var(--thermal);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .6s}
 .svc:hover{transform:translateY(-4px)}
 .svc:hover::before,.svc:hover::after{opacity:1}
@@ -208,7 +208,7 @@ html[data-theme=light] .theme{--ti:url("data:image/svg+xml,%3Csvg xmlns='http://
 .chips span{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:12px;background:var(--s2);border:1px solid var(--line);cursor:pointer;font-weight:500;transition:background .4s,color .4s}
 .chips input:checked+span{background:var(--chip-on);color:var(--chip-on-ink)}
 .chips input:focus-visible+span{outline:2px solid var(--warm);outline-offset:3px}
-.readout{position:relative;padding:clamp(24px,3.4vw,44px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 40%,rgba(255,106,43,.22),transparent 60%),var(--s2);overflow:hidden}
+.readout{position:relative;padding:clamp(24px,3.4vw,44px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 40%,rgba(235,162,115,.16),transparent 60%),var(--s2);overflow:hidden}
 .kw{display:flex;align-items:baseline;gap:10px;font:700 clamp(54px,6.4vw,84px)/1 var(--display);letter-spacing:-.04em;font-variant-numeric:tabular-nums;margin:10px 0}
 .kw i{font:500 18px var(--sans);color:var(--muted);font-style:normal;letter-spacing:0}
 .kw small{font-size:.36em;color:var(--muted);letter-spacing:0}
@@ -270,9 +270,9 @@ html[data-theme=light] .theme{--ti:url("data:image/svg+xml,%3Csvg xmlns='http://
 .acc-panel>div>div{padding:0 24px 22px;color:var(--muted)}
 
 /* cta + footer */
-.cta{position:relative;margin:0 var(--pad);border-radius:30px;overflow:hidden;text-align:center;padding:clamp(70px,9vw,120px) var(--pad);background:#120d14}
-.cta::before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 0deg,#3b1ccf,#b51fb8,#ff3d4f,#ff8a1c,#ffd23a,#3b1ccf);opacity:.35;animation:turn 18s linear infinite}
-.cta::after{content:"";position:absolute;inset:1px;border-radius:29px;background:radial-gradient(circle at 50% 0%,rgba(18,13,20,.55),#0d0b12 70%)}
+.cta{position:relative;margin:0 var(--pad);border-radius:30px;overflow:hidden;text-align:center;padding:clamp(70px,9vw,120px) var(--pad);background:#0f1622}
+.cta::before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 0deg,#2e5577,#5a86a6,#a9bfc8,#f0c49b,#eba273,#2e5577);opacity:.22;animation:turn 18s linear infinite}
+.cta::after{content:"";position:absolute;inset:1px;border-radius:29px;background:radial-gradient(circle at 50% 0%,rgba(15,22,34,.55),#0c121c 70%)}
 .cta>*{position:relative;z-index:1}
 .cta h2{font-size:clamp(40px,6vw,84px);max-width:14ch;margin:0 auto .3em}
 .cta p{color:#d6d8e2;max-width:540px;margin:0 auto 28px}
@@ -359,7 +359,7 @@ html[data-theme=light] .theme{--ti:url("data:image/svg+xml,%3Csvg xmlns='http://
           <a class="tlink" href="../../electrical.html">Electrical</a>
         </article>
         <article class="svc rv" style="--rd:.08s">
-          <div class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path class="l" d="M24 2v12"/><path class="l" d="M14 22l4-8h12l4 8z"/><path class="on1" style="--d:0s;fill:rgba(255,138,28,.35)" d="M14 22L6 46h36l-8-24z"/><circle class="hf on1" cx="24" cy="24" r="3"/></svg></div>
+          <div class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path class="l" d="M24 2v12"/><path class="l" d="M14 22l4-8h12l4 8z"/><path class="on1" style="--d:0s;fill:rgba(240,196,155,.4)" d="M14 22L6 46h36l-8-24z"/><circle class="hf on1" cx="24" cy="24" r="3"/></svg></div>
           <h3>Lighting</h3><p>Downlights, pendants, outdoor and security lights, switched where you reach for them.</p>
           <ul><li>LED and dimmers</li><li>Outdoor lighting</li></ul>
           <a class="tlink" href="../../electrical.html">Electrical</a>
@@ -406,7 +406,7 @@ html[data-theme=light] .theme{--ti:url("data:image/svg+xml,%3Csvg xmlns='http://
         <div class="readout" aria-live="polite">
           <span class="kicker" style="margin:0">Heating output, roughly</span>
           <div class="kw"><span class="grad" id="lo">2.5</span><i>to</i><span class="grad" id="hi">3.5</span><small>kW</small></div>
-          <svg class="gauge" viewBox="0 0 260 140" aria-hidden="true"><defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#3b1ccf"/><stop offset=".3" stop-color="#b51fb8"/><stop offset=".55" stop-color="#ff3d4f"/><stop offset=".8" stop-color="#ff8a1c"/><stop offset="1" stop-color="#ffd23a"/></linearGradient></defs><path d="M20 130A110 110 0 0 1 240 130" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="12" stroke-linecap="round"/><path id="arc" d="M20 130A110 110 0 0 1 240 130" fill="none" stroke="url(#gg)" stroke-width="12" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="70"/><line id="needle" x1="130" y1="130" x2="130" y2="40" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="130" cy="130" r="8" fill="#fff"/></svg>
+          <svg class="gauge" viewBox="0 0 260 140" aria-hidden="true"><defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#2e5577"/><stop offset=".3" stop-color="#5a86a6"/><stop offset=".55" stop-color="#a9bfc8"/><stop offset=".8" stop-color="#f0c49b"/><stop offset="1" stop-color="#eba273"/></linearGradient></defs><path d="M20 130A110 110 0 0 1 240 130" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="12" stroke-linecap="round"/><path id="arc" d="M20 130A110 110 0 0 1 240 130" fill="none" stroke="url(#gg)" stroke-width="12" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="70"/><line id="needle" x1="130" y1="130" x2="130" y2="40" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="130" cy="130" r="8" fill="#fff"/></svg>
           <p>A rough guide only. We confirm the right size at the site visit.</p>
           <a class="btn" href="../../contact.html">Book a site visit</a>
         </div>
@@ -443,7 +443,7 @@ html[data-theme=light] .theme{--ti:url("data:image/svg+xml,%3Csvg xmlns='http://
       <div class="head rv"><span class="kicker">Where we work</span><h2 id="map-h">Homes across the Waikato</h2><p class="lede">Pick your town to start an enquiry. If you are outside the area we cover, we will tell you straight away.</p></div>
       <div class="map-wrap">
         <svg class="map" id="map" viewBox="20 20 430 570" role="group" aria-label="Map of the Waikato with the Waikato River and main towns. Each town opens an enquiry.">
-          <defs><linearGradient id="tg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#3b1ccf"/><stop offset=".35" stop-color="#b51fb8"/><stop offset=".6" stop-color="#ff3d4f"/><stop offset=".85" stop-color="#ff8a1c"/><stop offset="1" stop-color="#ffd23a"/></linearGradient><radialGradient id="bl"><stop offset="0" stop-color="#ff6a2b" stop-opacity=".55"/><stop offset="1" stop-color="#ff6a2b" stop-opacity="0"/></radialGradient></defs>
+          <defs><linearGradient id="tg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#2e5577"/><stop offset=".35" stop-color="#5a86a6"/><stop offset=".6" stop-color="#a9bfc8"/><stop offset=".85" stop-color="#f0c49b"/><stop offset="1" stop-color="#eba273"/></linearGradient><radialGradient id="bl"><stop offset="0" stop-color="#eba273" stop-opacity=".55"/><stop offset="1" stop-color="#eba273" stop-opacity="0"/></radialGradient></defs>
           <path class="river" pathLength="1100" d="M398.4 554.4 C397.1 547.2 393.2 527.5 390.6 511.5 C388.0 495.6 391.5 477.9 382.8 458.7 C374.1 439.4 351.5 410.9 338.5 396.0 C325.5 381.1 313.4 376.8 304.7 369.6 C296.0 362.5 292.5 360.8 286.4 353.1 C280.3 345.4 273.0 331.1 268.2 323.4 C263.4 315.7 262.6 311.8 257.8 306.9 C253.0 301.9 247.0 298.6 239.6 293.7 C232.2 288.8 221.8 282.7 213.5 277.2 C205.2 271.7 197.5 267.3 190.1 260.7 C182.7 254.1 175.0 244.2 169.3 237.6 C163.7 231.0 157.9 229.9 156.2 221.1 C154.4 212.3 159.7 198.0 158.8 184.8 C157.9 171.6 154.0 154.6 151.0 141.9 C148.0 129.2 144.1 117.2 140.6 108.9 C137.1 100.7 136.3 95.7 130.2 92.4 C124.1 89.1 113.8 86.3 104.2 89.1 C94.7 91.8 82.9 102.3 72.9 108.9 C62.9 115.5 49.1 125.4 44.3 128.7" aria-hidden="true"/>
           <g aria-hidden="true"><circle class="blob" cx="190" cy="261" r="46" fill="url(#bl)"/><circle class="blob" style="--d:.7s" cx="240" cy="294" r="30" fill="url(#bl)"/><circle class="blob" style="--d:1.4s" cx="200" cy="333" r="26" fill="url(#bl)"/><circle class="blob" style="--d:2.1s" cx="157" cy="200" r="28" fill="url(#bl)"/><circle class="blob" style="--d:2.8s" cx="255" cy="218" r="24" fill="url(#bl)"/><circle class="blob" style="--d:1s" cx="318" cy="267" r="24" fill="url(#bl)"/></g>
           <a href="../../contact.html?town=Hamilton"><circle class="pt" cx="190.1" cy="260.7" r="7"/><text class="big" x="206" y="254">Hamilton</text></a>
