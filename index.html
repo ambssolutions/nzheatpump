@@ -7,7 +7,7 @@
 <meta name="description" content="Heat pump supply, installation, servicing and repairs, plus electrical work for homes across the Waikato.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#13231f">
-<meta name="build" content="2026-10-20.1">
+<meta name="build" content="2026-10-20.2">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_NZ">
 <meta property="og:site_name" content="NZ Heat Pump Services">
@@ -19,8 +19,8 @@
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" imagesrcset="assets/img/dusk-home-800.webp 800w, assets/img/dusk-home-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
-<link rel="stylesheet" href="assets/site.css?v=1">
-<script>document.documentElement.classList.add("js")</script>
+<link rel="stylesheet" href="assets/site.css?v=2">
+<script>(function(d){var t;try{t=localStorage.getItem("nzhp-theme")}catch(e){}if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.setAttribute("data-theme",t);d.classList.add("js")})(document.documentElement)</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":["HVACBusiness","Electrician"],"name":"NZ Heat Pump Services","description":"Heat pump supply, installation, servicing and repairs, plus electrical work for homes across the Waikato.","areaServed":{"@type":"AdministrativeArea","name":"Waikato, New Zealand"},"image":"assets/img/dusk-home-1600.webp"}
 </script>
@@ -39,18 +39,21 @@
       <a href="electrical.html">Electrical</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
+      <button class="theme-btn in-nav" type="button" aria-pressed="false">Dark mode</button>
       <a class="btn" href="contact.html">Get a quote</a>
     </nav>
+    <button class="icon-btn theme-btn" type="button" aria-label="Switch between light and dark" aria-pressed="false">
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
     <a class="btn" href="contact.html">Get a quote</a>
     <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menu"><i></i><i></i><i></i></button>
   </div>
 </header>
 
 <main id="main">
-  <section class="hero" aria-labelledby="h1">
-    <picture>
-      <img src="assets/img/dusk-home-1600.webp" srcset="assets/img/dusk-home-800.webp 800w, assets/img/dusk-home-1600.webp 1600w" sizes="100vw" width="1600" height="1067" alt="A modern home at dusk with warm light in every window" fetchpriority="high" decoding="async">
-    </picture>
+  <section class="hero has-rail" aria-labelledby="h1">
+    <img src="assets/img/dusk-home-1600.webp" srcset="assets/img/dusk-home-800.webp 800w, assets/img/dusk-home-1600.webp 1600w" sizes="100vw" width="1600" height="1067" alt="A modern home at dusk with warm light in every window" fetchpriority="high" decoding="async">
     <div class="frost" aria-hidden="true"></div><div class="warm" aria-hidden="true"></div>
     <div class="wrap">
       <h1 id="h1" aria-label="Warm homes and sound wiring across the Waikato">Warm homes and sound wiring across the Waikato</h1>
@@ -61,95 +64,263 @@
         <a class="tlink" href="#" data-href="tel" data-need="phone">Call <span data-fact="phone"></span></a>
       </div>
     </div>
-    <span class="hero-wire" aria-hidden="true"><i></i></span>
+    <nav class="rail" aria-label="Services">
+      <ol>
+        <li><a href="#services" data-go="0"><b>01</b>Heat pump installs</a></li>
+        <li><a href="#services" data-go="1"><b>02</b>Servicing</a></li>
+        <li><a href="#services" data-go="2"><b>03</b>Repairs</a></li>
+        <li><a href="#services" data-go="3"><b>04</b>Switchboards</a></li>
+        <li><a href="#services" data-go="4"><b>05</b>Lighting</a></li>
+        <li><a href="#services" data-go="5"><b>06</b>New circuits</a></li>
+      </ol>
+    </nav>
   </section>
 
-  <section class="sec fed" aria-labelledby="what">
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-in">
+      <ul><li>Heat pump installs</li><li>Hamilton</li><li>Servicing and cleaning</li><li>Cambridge</li><li>Switchboard upgrades</li><li>Te Awamutu</li><li>Lighting</li><li>Morrinsville</li><li>Fault finding</li><li>Matamata</li><li>New circuits</li><li>Huntly</li></ul>
+      <ul><li>Heat pump installs</li><li>Hamilton</li><li>Servicing and cleaning</li><li>Cambridge</li><li>Switchboard upgrades</li><li>Te Awamutu</li><li>Lighting</li><li>Morrinsville</li><li>Fault finding</li><li>Matamata</li><li>New circuits</li><li>Huntly</li></ul>
+    </div>
+  </div>
+
+  <section class="sec fed" id="services" aria-labelledby="what">
     <div class="wrap">
       <div class="head rv">
         <span class="wire" aria-hidden="true"><i></i></span>
         <h2 id="what">Two trades, one visit</h2>
-        <p class="lede">Most heat pump installs need electrical work too. We do both, so you deal with one team and one invoice.</p>
+        <p class="lede">Most heat pump installs need electrical work too. We do both, so you deal with one team from the first visit to the final certificate.</p>
       </div>
-      <div class="trades">
-        <article class="trade">
-          <div class="vis">
-            <svg class="draw" viewBox="0 0 400 300" role="img" aria-label="Line drawing of an indoor heat pump unit on a wall, piped to an outdoor unit">
-              <line class="ln" pathLength="100" x1="30" y1="270" x2="370" y2="270"/>
-              <rect class="ln" pathLength="100" x="48" y="58" width="210" height="62" rx="10"/>
-              <path class="ln" pathLength="100" d="M64 104h178"/>
-              <path class="ln cu" pathLength="100" d="M258 90h52v86"/>
-              <rect class="ln" pathLength="100" x="252" y="176" width="124" height="94" rx="4"/>
-              <circle class="ln" pathLength="100" cx="300" cy="223" r="30"/>
-              <circle class="ln" pathLength="100" cx="300" cy="223" r="6"/>
-              <path class="ln" pathLength="100" d="M346 196v54M358 196v54"/>
-              <path class="air" d="M80 136c10 30 4 62-10 92M130 136c6 34 2 70-6 104M180 136c4 30 10 60 26 86"/>
-            </svg>
-          </div>
-          <span class="tag">Heat pumps</span>
-          <h3>Installed to suit the room, serviced to keep running</h3>
-          <p>We size each unit to the space and to a cold inland morning, fit it neatly, and look after it in the years that follow.</p>
-          <ul class="ticks">
-            <li>New installs: high-wall, floor console and ducted</li>
-            <li>Replacing old or noisy units</li>
-            <li>Servicing and deep cleans</li>
-            <li>Repairs and fault finding</li>
-          </ul>
-          <a class="tlink" href="heat-pumps.html">More on heat pumps</a>
-        </article>
-        <article class="trade">
-          <div class="vis wipe">
-            <img src="assets/img/switchboard-800.webp" srcset="assets/img/switchboard-800.webp 800w, assets/img/switchboard-1600.webp 1600w" sizes="(max-width:820px) 90vw, 560px" width="800" height="1000" alt="A neatly wired switchboard with rows of circuit breakers" loading="lazy" decoding="async">
-          </div>
-          <span class="tag">Electrical</span>
-          <h3>Everyday electrical work, done properly and signed off</h3>
-          <p>From a new circuit for your heat pump to a full switchboard upgrade, every job finishes with the paperwork the law asks for.</p>
-          <ul class="ticks">
-            <li>Switchboard upgrades and new circuits</li>
-            <li>Lighting, inside and out</li>
-            <li>Power points and renovation wiring</li>
-            <li>Fault finding</li>
-          </ul>
-          <a class="tlink" href="electrical.html">More on electrical work</a>
-        </article>
-      </div>
-    </div>
-  </section>
 
-  <section class="sec fed sand cv" aria-labelledby="winter">
-    <div class="wrap">
-      <div class="head rv">
-        <span class="wire" aria-hidden="true"><i></i></span>
-        <h2 id="winter">Sized for a Waikato winter</h2>
-        <p class="lede">Inland Waikato gets hard frosts and thick morning fog. A heat pump that is too small runs flat out and still leaves the room cold, so we size for the coldest mornings, not the average ones.</p>
-      </div>
-      <div class="split">
-        <figure>
-          <div class="wipe"><img src="assets/img/bedroom-800.webp" srcset="assets/img/bedroom-800.webp 800w, assets/img/bedroom-1600.webp 1600w" sizes="(max-width:860px) 90vw, 600px" width="800" height="508" alt="A calm bedroom with timber floors and large windows" loading="lazy" decoding="async"></div>
-          <figcaption>Illustrative photo</figcaption>
-        </figure>
-        <div>
-          <h3>What we look at before we quote</h3>
-          <ul class="ticks">
-            <li>The size of the room and the height of the ceiling</li>
-            <li>Insulation, windows and which way the room faces</li>
-            <li>Where the outdoor unit can sit, for airflow and for the neighbours</li>
-            <li>How far the pipes need to run, and how they will be hidden</li>
-            <li>Whether your switchboard has room for a new circuit</li>
-          </ul>
-          <a class="btn" href="contact.html">Book a site visit</a>
+      <div class="show" role="region" aria-roledescription="carousel" aria-label="Our six services">
+        <div class="bars" role="group" aria-label="Choose a service">
+          <button type="button" class="bar" data-i="0" aria-current="true"><i><b></b></i><span>Heat pump installs</span></button>
+          <button type="button" class="bar" data-i="1"><i><b></b></i><span>Servicing</span></button>
+          <button type="button" class="bar" data-i="2"><i><b></b></i><span>Repairs</span></button>
+          <button type="button" class="bar" data-i="3"><i><b></b></i><span>Switchboards</span></button>
+          <button type="button" class="bar" data-i="4"><i><b></b></i><span>Lighting</span></button>
+          <button type="button" class="bar" data-i="5"><i><b></b></i><span>New circuits</span></button>
+        </div>
+        <div class="stage" id="stage">
+
+          <div class="slide on" role="group" aria-roledescription="slide" aria-label="1 of 6: Heat pump installs">
+            <div class="art"><span class="tag" aria-hidden="true">Inside / Outside</span>
+              <svg class="sc" viewBox="0 0 400 260" aria-hidden="true">
+                <defs><radialGradient id="wg"><stop offset="0" stop-color="#e08a55" stop-opacity=".38"/><stop offset="1" stop-color="#e08a55" stop-opacity="0"/></radialGradient></defs>
+                <ellipse class="pulse" cx="112" cy="160" rx="110" ry="70" fill="url(#wg)"/>
+                <path class="ln soft" d="M10 232H232M250 232H392"/>
+                <rect class="ln soft fillsoft" x="232" y="18" width="18" height="214"/>
+                <rect class="ln" x="38" y="48" width="154" height="42" rx="8"/>
+                <path class="ln soft" d="M52 80H178"/>
+                <circle class="cuf blink" cx="176" cy="60" r="2.6"/>
+                <path class="ln cu flow" d="M64 98C58 128 70 150 60 184M100 98C98 132 110 156 104 196M138 98C142 128 152 150 150 186M174 98C184 124 194 140 196 170"/>
+                <path class="ln soft" d="M50 232v-26h112v26M44 206h124v-14a8 8 0 0 0-8-8H52a8 8 0 0 0-8 8z"/>
+                <path class="ln cu" stroke-width="4" d="M192 64H241V172H270"/>
+                <path class="ln flow slow" stroke-opacity=".9" d="M192 64H241V172H270"/>
+                <rect class="ln" x="270" y="146" width="106" height="76" rx="4"/>
+                <circle class="ln" cx="306" cy="184" r="25"/>
+                <g class="spin"><path class="ln" d="M306 184l0-21M306 184l18 11M306 184l-18 11"/><circle cx="306" cy="184" r="25" fill="none" stroke="none"/></g>
+                <path class="ln soft" d="M346 156v56M356 156v56M366 156v56M278 222v10M368 222v10"/>
+                <circle cx="362" cy="44" r="12" fill="currentColor" fill-opacity=".85"/>
+                <circle cx="372" cy="40" r="10" style="fill:var(--night)"/>
+                <g fill="currentColor"><circle class="twinkle" style="--d:0s" cx="282" cy="34" r="1.6"/><circle class="twinkle" style="--d:.8s" cx="316" cy="60" r="1.3"/><circle class="twinkle" style="--d:1.6s" cx="268" cy="80" r="1.4"/><circle class="twinkle" style="--d:2.2s" cx="338" cy="100" r="1.2"/></g>
+                <g class="ln cold twinkle" style="--d:.4s"><path d="M290 244l6 6M296 244l-6 6M330 246l5 5M335 246l-5 5M368 243l6 6M374 243l-6 6"/></g>
+              </svg>
+            </div>
+            <div class="copy">
+              <span class="mono">Service 01 of 06</span>
+              <h3>Heat pump installs</h3>
+              <p>Sized to the room and to a cold inland morning, fitted neatly, and wired on its own circuit.</p>
+              <ul class="ticks">
+                <li>High-wall, floor console, multi-split and ducted</li>
+                <li>Outdoor units on solid brackets or bases</li>
+                <li>Pipe runs covered and kept tidy</li>
+                <li>Replacing old or noisy units</li>
+              </ul>
+              <a class="tlink" href="heat-pumps.html">More on heat pumps</a>
+            </div>
+          </div>
+
+          <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 6: Servicing">
+            <div class="art"><span class="tag" aria-hidden="true">Annual service</span>
+              <svg class="sc" viewBox="0 0 400 260" aria-hidden="true">
+                <path class="ln soft" d="M20 30H380"/>
+                <rect class="ln" x="56" y="58" width="270" height="66" rx="10"/>
+                <path class="ln soft" d="M60 54L322 26"/>
+                <g class="slidex"><rect class="ln cu" x="96" y="72" width="160" height="16" rx="2"/><path class="ln soft" d="M112 72v16M128 72v16M144 72v16M160 72v16M176 72v16M192 72v16M208 72v16M224 72v16M240 72v16"/></g>
+                <path class="ln soft" d="M70 112H312"/>
+                <g fill="currentColor" fill-opacity=".7"><circle class="fall" style="--d:0s" cx="120" cy="130" r="2"/><circle class="fall" style="--d:.7s" cx="160" cy="132" r="1.6"/><circle class="fall" style="--d:1.3s" cx="200" cy="130" r="2.2"/><circle class="fall" style="--d:1.9s" cx="236" cy="131" r="1.5"/></g>
+                <rect class="ln" x="250" y="146" width="112" height="98" rx="4"/>
+                <rect class="ln" x="284" y="138" width="44" height="14" rx="3"/>
+                <g class="ln soft"><path d="M290 176H346M290 202H346M290 228H340"/></g>
+                <g class="ln"><rect x="264" y="168" width="14" height="14"/><rect x="264" y="194" width="14" height="14"/><rect x="264" y="220" width="14" height="14"/></g>
+                <g class="ln cu" stroke-width="2.4"><path class="seq" style="--d:0s" d="M266 175l4 4 7-8"/><path class="seq" style="--d:.6s" d="M266 201l4 4 7-8"/><path class="seq" style="--d:1.2s" d="M266 227l4 4 7-8"/></g>
+                <path class="ln" d="M70 244V190h26v54zM78 190v-14h10v14M88 178h18"/>
+                <g fill="#8fb9dc"><circle class="twinkle" style="--d:0s" cx="114" cy="172" r="2"/><circle class="twinkle" style="--d:.5s" cx="124" cy="166" r="1.6"/><circle class="twinkle" style="--d:1s" cx="122" cy="180" r="1.8"/><circle class="twinkle" style="--d:1.5s" cx="134" cy="172" r="1.4"/></g>
+                <path class="ln soft" d="M20 244H380"/>
+              </svg>
+            </div>
+            <div class="copy">
+              <span class="mono">Service 02 of 06</span>
+              <h3>Servicing and deep cleans</h3>
+              <p>A clean heat pump heats better and runs quieter. Most manufacturers recommend a professional service once a year.</p>
+              <ul class="ticks">
+                <li>Filters, indoor coil and fan cleaned</li>
+                <li>Condensate drain checked and cleared</li>
+                <li>Outdoor unit cleared of leaves and debris</li>
+                <li>Heating and cooling tested before we leave</li>
+              </ul>
+              <a class="tlink" href="heat-pumps.html#servicing">What a service covers</a>
+            </div>
+          </div>
+
+          <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 6: Repairs">
+            <div class="art"><span class="tag" aria-hidden="true">Fault finding</span>
+              <svg class="sc" viewBox="0 0 400 260" aria-hidden="true">
+                <path class="ln soft" d="M20 26H380"/>
+                <rect class="ln" x="40" y="40" width="204" height="52" rx="9"/>
+                <path class="ln soft" d="M54 80H200"/>
+                <circle class="cuf blink" cx="224" cy="78" r="4.5"/>
+                <circle class="cuf pulse" cx="224" cy="78" r="9" fill-opacity=".25"/>
+                <rect class="ln" x="252" y="104" width="112" height="140" rx="12"/>
+                <rect class="ln fillsoft" x="266" y="118" width="84" height="50" rx="3"/>
+                <path class="ln soft" d="M276 158A32 32 0 0 1 340 158"/>
+                <path class="ln soft" d="M282 146l4 3M308 128v5M334 146l-4 3"/>
+                <line class="ln cu swing" stroke-width="2.4" x1="308" y1="160" x2="308" y2="130" style="transform-origin:308px 160px"/>
+                <circle class="ln" cx="308" cy="204" r="20"/>
+                <path class="ln" d="M308 204l9-9"/>
+                <circle class="cuf" cx="282" cy="234" r="3.5"/><circle cx="334" cy="234" r="3.5" fill="currentColor"/>
+                <path class="ln cu" d="M282 234C250 250 190 230 168 160L156 104"/>
+                <path class="ln" d="M334 234C318 252 222 256 196 176L190 104"/>
+                <path class="ln cu" stroke-width="3" d="M156 104l-4-12"/><path class="ln" stroke-width="3" d="M190 104l-2-12"/>
+                <path class="ln cu pulse" d="M140 92l-6-8M148 88l-2-10M160 92l6-8"/>
+              </svg>
+            </div>
+            <div class="copy">
+              <span class="mono">Service 03 of 06</span>
+              <h3>Repairs and fault finding</h3>
+              <p>Weak airflow, water dripping, a musty smell or flashing lights. We find the cause and fix it properly.</p>
+              <ul class="ticks">
+                <li>Error codes and flashing lights diagnosed</li>
+                <li>Leaking drains and blocked lines</li>
+                <li>Electrical faults on the heat pump circuit</li>
+                <li>Send us a photo of the code to save a trip</li>
+              </ul>
+              <a class="tlink" href="heat-pumps.html#servicing">Signs it needs a look</a>
+            </div>
+          </div>
+
+          <div class="slide" role="group" aria-roledescription="slide" aria-label="4 of 6: Switchboards">
+            <div class="art"><span class="tag" aria-hidden="true">Switchboard upgrade</span>
+              <svg class="sc" viewBox="0 0 400 260" aria-hidden="true">
+                <rect class="ln" x="88" y="22" width="224" height="212" rx="3"/>
+                <rect class="ln soft" x="102" y="36" width="196" height="184"/>
+                <rect class="ln" x="116" y="54" width="42" height="50" rx="2"/>
+                <rect class="cuf flip" style="--d:0s" x="130" y="70" width="14" height="18" rx="2"/>
+                <g class="ln"><rect x="168" y="54" width="16" height="50"/><rect x="190" y="54" width="16" height="50"/><rect x="212" y="54" width="16" height="50"/><rect x="234" y="54" width="16" height="50"/><rect x="256" y="54" width="16" height="50"/></g>
+                <g fill="currentColor"><rect class="flip" style="--d:.3s" x="172" y="72" width="8" height="12"/><rect class="flip" style="--d:.6s" x="194" y="72" width="8" height="12"/><rect class="flip" style="--d:.9s" x="216" y="72" width="8" height="12"/><rect class="flip" style="--d:1.2s" x="238" y="72" width="8" height="12"/><rect class="flip" style="--d:1.5s" x="260" y="72" width="8" height="12"/></g>
+                <path class="ln soft" d="M110 116H290"/>
+                <g class="ln"><rect x="116" y="128" width="16" height="50"/><rect x="138" y="128" width="16" height="50"/><rect x="160" y="128" width="16" height="50"/><rect x="182" y="128" width="16" height="50"/><rect x="204" y="128" width="16" height="50"/><rect x="226" y="128" width="16" height="50"/><rect x="248" y="128" width="16" height="50"/><rect x="270" y="128" width="16" height="50"/></g>
+                <g class="cuf"><circle class="seq" style="--d:.2s" cx="124" cy="138" r="2.4"/><circle class="seq" style="--d:.5s" cx="146" cy="138" r="2.4"/><circle class="seq" style="--d:.8s" cx="168" cy="138" r="2.4"/><circle class="seq" style="--d:1.1s" cx="190" cy="138" r="2.4"/><circle class="seq" style="--d:1.4s" cx="212" cy="138" r="2.4"/><circle class="seq" style="--d:1.7s" cx="234" cy="138" r="2.4"/><circle class="seq" style="--d:2s" cx="256" cy="138" r="2.4"/><circle class="seq" style="--d:2.3s" cx="278" cy="138" r="2.4"/></g>
+                <path class="ln cu" stroke-width="2.2" d="M124 178v30c0 10 6 14 16 14H200M168 178v30M212 178v24h40M256 178v20"/>
+                <path class="ln flow" stroke-opacity=".8" d="M124 178v30c0 10 6 14 16 14H200M212 178v24h40"/>
+                <path class="ln soft" d="M200 234v18M190 252h20"/>
+                <g class="ln soft"><path d="M20 70h50M20 110h50M20 150h50"/><path d="M330 70h50M330 110h50M330 150h50"/></g>
+              </svg>
+            </div>
+            <div class="copy">
+              <span class="mono">Service 04 of 06</span>
+              <h3>Switchboard upgrades</h3>
+              <p>Older boards can run out of room or still use old-style fuses. An upgrade brings modern circuit breakers and RCD protection, with space to grow.</p>
+              <ul class="ticks">
+                <li>Old fuses replaced with circuit breakers</li>
+                <li>RCD protection for your circuits</li>
+                <li>Room for a heat pump, oven or EV charger later</li>
+                <li>Certified when the job is done</li>
+              </ul>
+              <a class="tlink" href="electrical.html">More on electrical work</a>
+            </div>
+          </div>
+
+          <div class="slide" role="group" aria-roledescription="slide" aria-label="5 of 6: Lighting">
+            <div class="art"><span class="tag" aria-hidden="true">Inside and out</span>
+              <svg class="sc" viewBox="0 0 400 260" aria-hidden="true">
+                <path class="ln soft" d="M10 28H390M10 234H390"/>
+                <g fill="#e08a55" fill-opacity=".16">
+                  <path class="seq" style="--d:0s" d="M76 102L30 234H170L124 102Z"/>
+                  <path class="seq" style="--d:.5s" d="M176 102L130 234H270L224 102Z"/>
+                  <path class="seq" style="--d:1s" d="M276 102L230 234H370L324 102Z"/>
+                </g>
+                <path class="ln" d="M100 28V78M200 28V78M300 28V78"/>
+                <path class="ln" d="M76 102L88 78H112L124 102ZM176 102L188 78H212L224 102ZM276 102L288 78H312L324 102Z"/>
+                <g class="cuf"><circle class="seq" style="--d:0s" cx="100" cy="106" r="5"/><circle class="seq" style="--d:.5s" cx="200" cy="106" r="5"/><circle class="seq" style="--d:1s" cx="300" cy="106" r="5"/></g>
+                <path class="ln soft" d="M110 234v-40h180v40M100 194h200"/>
+                <rect class="ln" x="356" y="140" width="22" height="34" rx="2"/>
+                <rect class="cuf flip" style="--d:0s" x="363" y="150" width="8" height="12" rx="1"/>
+              </svg>
+            </div>
+            <div class="copy">
+              <span class="mono">Service 05 of 06</span>
+              <h3>Lighting, inside and out</h3>
+              <p>Lighting that suits how you use each room, switched where you reach for it.</p>
+              <ul class="ticks">
+                <li>LED downlights and dimmers</li>
+                <li>Pendant and feature lighting</li>
+                <li>Outdoor and security lights</li>
+                <li>Two-way switching for stairs and hallways</li>
+              </ul>
+              <a class="tlink" href="electrical.html">More on electrical work</a>
+            </div>
+          </div>
+
+          <div class="slide" role="group" aria-roledescription="slide" aria-label="6 of 6: New circuits">
+            <div class="art"><span class="tag" aria-hidden="true">New circuits</span>
+              <svg class="sc" viewBox="0 0 400 260" aria-hidden="true">
+                <rect class="ln soft" x="16" y="20" width="368" height="214"/>
+                <rect class="ln" x="38" y="52" width="64" height="88" rx="3"/>
+                <g class="ln soft"><path d="M48 70h44M48 86h44M48 102h44M48 118h44"/></g>
+                <circle class="cuf blink" cx="90" cy="62" r="2.6"/>
+                <path class="ln cu" stroke-width="3" d="M102 96H196V184H292"/>
+                <path class="ln flow" stroke-opacity=".9" d="M102 96H196V184H292"/>
+                <path class="ln cu" stroke-width="3" d="M196 96V64H250"/>
+                <path class="ln flow" stroke-opacity=".9" d="M196 96V64H250"/>
+                <rect class="ln" x="250" y="46" width="40" height="36" rx="3"/>
+                <path class="ln soft" d="M262 58v10M278 58v10"/>
+                <rect class="ln" x="292" y="160" width="56" height="48" rx="4"/>
+                <path class="ln" d="M308 174v12M320 174v12M332 180h0"/>
+                <g class="plug"><rect class="ln" x="346" y="168" width="22" height="30" rx="3"/><path class="ln" d="M346 176h-10M346 190h-10M368 183h14"/></g>
+                <path class="ln cu pulse" d="M342 156l-4-8M350 154l2-9M356 160l7-5"/>
+              </svg>
+            </div>
+            <div class="copy">
+              <span class="mono">Service 06 of 06</span>
+              <h3>New circuits and power points</h3>
+              <p>Power where you actually need it, and dedicated circuits for the appliances that need their own.</p>
+              <ul class="ticks">
+                <li>Extra power points and USB outlets</li>
+                <li>Circuits for heat pumps, ovens and spa pools</li>
+                <li>Renovation and extension wiring</li>
+                <li>Fault finding on circuits that keep tripping</li>
+              </ul>
+              <a class="tlink" href="electrical.html">More on electrical work</a>
+            </div>
+          </div>
+        </div>
+        <div class="ctrl">
+          <button type="button" class="prev" aria-label="Previous service"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <span class="count" aria-hidden="true">01 / 06</span>
+          <button type="button" class="next" aria-label="Next service"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <button type="button" class="toggle" aria-label="Pause the slideshow"><svg class="pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="2.4"/></svg><svg class="play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z" fill="currentColor"/></svg></button>
         </div>
       </div>
     </div>
   </section>
 
-
-  <section class="sec fed cv" aria-labelledby="size">
+  <section class="sec fed sand" aria-labelledby="size">
     <div class="wrap">
       <div class="head rv">
         <span class="wire" aria-hidden="true"><i></i></span>
-        <h2 id="size">Why sizing matters</h2>
-        <p class="lede">The same room on the same frosty morning, with two different heat pumps. Switch between them.</p>
+        <h2 id="size">Sized for a Waikato winter</h2>
+        <p class="lede">Inland Waikato gets hard frosts and thick morning fog. Here is the same room on the same frosty morning, with two different heat pumps.</p>
       </div>
       <div class="demo">
         <svg class="room" id="room" viewBox="0 0 640 380" role="img" aria-label="A room with a heat pump that is too small: warm air stays near the unit and the window side stays cold">
@@ -159,19 +330,22 @@
             <radialGradient id="gh" gradientUnits="userSpaceOnUse" cx="505" cy="82" r="460"><stop offset="0" stop-color="#e8935a" stop-opacity=".75"/><stop offset=".45" stop-color="#f0b080" stop-opacity=".45"/><stop offset="1" stop-color="#f5d2b0" stop-opacity="0"/></radialGradient>
           </defs>
           <g clip-path="url(#rc)">
-            <rect class="cold" x="40" y="30" width="560" height="310" fill="url(#gc)"/>
+            <rect class="coldf" x="40" y="30" width="560" height="310" fill="url(#gc)"/>
             <g class="heat"><circle cx="505" cy="82" r="460" fill="url(#gh)"/></g>
           </g>
           <rect class="wall" x="40" y="30" width="560" height="310"/>
           <rect class="thin" x="80" y="90" width="130" height="140"/>
-          <path class="thin" d="M145 90v140M80 160h130"/>
+          <path class="thin" d="M145 90v140M80 160h130M70 84h150M76 84v156M214 84v156"/>
           <g class="ice" stroke="#5f93bf" stroke-width="1.6" fill="none" stroke-linecap="round">
-            <path d="M84 94l14 12M84 108l8 6M98 94l6 8M206 94l-14 12M206 108l-8 6M84 226l14-12M206 226l-14-12M150 156l8-8M150 164l8 8"/>
+            <path d="M84 94l14 12M84 108l8 6M98 94l6 8M206 94l-14 12M206 108l-8 6M84 226l14-12M206 226l-14-12M150 156l8-8M150 164l8 8M140 98l-6 8M150 98l6 8"/>
           </g>
           <rect class="unit" x="430" y="60" width="150" height="42" rx="8"/>
           <path class="thin" d="M444 92h122"/>
           <path class="air" d="M450 110C425 150 390 185 340 225M495 110C480 165 455 215 425 262M545 110C540 165 528 220 510 272"/>
+          <g><circle class="mote" style="--d:0s" cx="300" cy="200" r="3"/><circle class="mote" style="--d:.8s" cx="220" cy="250" r="2.6"/><circle class="mote" style="--d:1.6s" cx="160" cy="190" r="3"/><circle class="mote" style="--d:2.2s" cx="380" cy="280" r="2.4"/><circle class="mote" style="--d:1.1s" cx="250" cy="150" r="2.4"/></g>
           <path class="thin" d="M150 340v-34h170v34M140 306h190v-22a10 10 0 0 0-10-10H150a10 10 0 0 0-10 10z"/>
+          <path class="thin" d="M380 340v-60M366 280h28l-6-26h-16z"/>
+          <path class="thin" d="M240 340h120" stroke-dasharray="2 6"/>
           <text x="84" y="252">Window</text>
           <text x="470" y="52">Heat pump</text>
         </svg>
@@ -181,8 +355,14 @@
             <button type="button" data-size="ok" aria-pressed="false">Sized right</button>
           </div>
           <div class="demo-say" aria-live="polite" id="say"><strong>Too small</strong>The unit runs flat out to keep up. Warm air stays near the heat pump, while the window side of the room stays cold. It is noisier and works harder than it should.</div>
-          <p class="note">An illustration, not a measurement. We size every install on site.</p>
-          <a class="btn" href="contact.html">Book a site visit</a>
+          <h3 style="font-size:20px;margin-top:8px">What we look at before we quote</h3>
+          <ul class="ticks">
+            <li>Room size, ceiling height and which way it faces</li>
+            <li>Insulation, glazing and draughts</li>
+            <li>Where the outdoor unit can sit, for airflow and the neighbours</li>
+            <li>Whether your switchboard has room for a new circuit</li>
+          </ul>
+          <p class="note">The room is an illustration, not a measurement. We size every install on site.</p>
         </div>
       </div>
     </div>
@@ -191,79 +371,102 @@
   <section class="sec" aria-labelledby="install">
     <div class="wrap">
       <div class="stack-head"><h2 id="install">How an install goes</h2></div>
-      <ol class="stack" role="list" style="list-style:none;padding:0;margin:0">
-        <li class="card" style="--i:0"><span class="no">01</span><h3>Site visit</h3><p>We come to the house, measure up, and talk through where the indoor and outdoor units will go. You see the options before anything is decided.</p></li>
-        <li class="card" style="--i:1"><span class="no">02</span><h3>Written quote</h3><p>You get a quote that names the unit, the install and any electrical work. If the switchboard needs attention, it is on the quote, not a surprise on the day.</p></li>
-        <li class="card" style="--i:2"><span class="no">03</span><h3>Install day</h3><p>The outdoor unit goes on a solid base, pipes are run and covered, and the unit gets its own circuit. We clean up and test it with you in the room.</p></li>
-        <li class="card" style="--i:3"><span class="no">04</span><h3>Handover and paperwork</h3><p>We show you the remote, the filters and the settings that matter. You keep the electrical certificate for the work and the manufacturer warranty details.</p></li>
+      <ol class="stack" role="list">
+        <li class="card" style="--i:0"><span class="no">01</span><div><h3>Site visit</h3><p>We come to the house, measure up, and talk through where the indoor and outdoor units will go. You see the options before anything is decided.</p></div>
+          <svg class="vig" viewBox="0 0 300 200" aria-hidden="true"><path class="ln" d="M30 180V90l90-60 90 60v90z"/><rect class="ln soft" x="60" y="104" width="54" height="44"/><path class="ln cu" d="M60 164h54M60 158v12M114 158v12"/><rect class="ln" x="150" y="120" width="34" height="60"/><rect class="ln" x="222" y="96" width="56" height="78" rx="3"/><path class="ln soft" d="M232 114h36M232 128h36M232 142h26"/><rect class="ln" x="238" y="88" width="24" height="12" rx="2"/></svg></li>
+        <li class="card" style="--i:1"><span class="no">02</span><div><h3>Written quote</h3><p>You get a quote that names the unit, the install and any electrical work. If the switchboard needs attention, it is on the quote, not a surprise on the day.</p></div>
+          <svg class="vig" viewBox="0 0 300 200" aria-hidden="true"><rect class="ln" x="70" y="16" width="140" height="176" rx="3"/><path class="ln soft" d="M90 46h80M90 66h100M90 86h100M90 106h70M90 140h100M90 156h100"/><path class="ln" d="M90 26h40"/><circle class="cuf" cx="216" cy="160" r="24"/><path d="M205 160l8 8 14-16" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+        <li class="card" style="--i:2"><span class="no">03</span><div><h3>Install day</h3><p>The outdoor unit goes on a solid base, pipes are run and covered, and the unit gets its own circuit. We clean up and test it with you in the room.</p></div>
+          <svg class="vig" viewBox="0 0 300 200" aria-hidden="true"><rect class="ln soft" x="20" y="10" width="14" height="182"/><rect class="ln" x="56" y="26" width="120" height="34" rx="6"/><path class="ln soft" d="M66 50h96"/><path class="ln cu" stroke-width="3" d="M176 44h40v86h20"/><rect class="ln" x="236" y="104" width="54" height="56" rx="3"/><circle class="ln" cx="258" cy="132" r="16"/><path class="ln" d="M240 160v20h46v-20M240 180h46"/><path class="ln soft" d="M10 192h290"/></svg></li>
+        <li class="card" style="--i:3"><span class="no">04</span><div><h3>Handover and paperwork</h3><p>We show you the remote, the filters and the settings that matter. You get a Certificate of Compliance for the electrical work, an Electrical Safety Certificate when new work is connected, and the warranty details.</p></div>
+          <svg class="vig" viewBox="0 0 300 200" aria-hidden="true"><rect class="ln" x="40" y="20" width="150" height="170" rx="3"/><path class="ln soft" d="M60 50h110M60 70h110M60 90h80"/><circle class="ln cu" cx="150" cy="146" r="20"/><path class="ln cu" d="M140 164l-6 22 16-8 16 8-6-22"/><rect class="ln" x="216" y="70" width="46" height="110" rx="12"/><rect class="ln soft" x="226" y="84" width="26" height="22" rx="2"/><circle class="cuf" cx="239" cy="130" r="6"/><path class="ln soft" d="M228 152h22M228 164h22"/></svg></li>
       </ol>
     </div>
   </section>
 
-  <section class="sec fed dark cv" aria-labelledby="signed">
+  <section class="sec fed night" aria-labelledby="hhh">
     <div class="wrap">
       <div class="head rv">
         <span class="wire" aria-hidden="true"><i></i></span>
-        <h2 id="signed">Every job signed off</h2>
-        <p class="lede">In New Zealand, electrical work on your home must be done by a licensed electrician. When we finish, you get the certificate the law requires for that work.</p>
+        <span class="mono">For landlords</span>
+        <h2 id="hhh" style="margin-top:.4em">Rentals and the Healthy Homes heating standard</h2>
       </div>
-      <div class="split rev">
-        <figure>
-          <div class="wipe"><img src="assets/img/electrician-800.webp" srcset="assets/img/electrician-800.webp 800w, assets/img/electrician-1600.webp 1600w" sizes="(max-width:860px) 90vw, 600px" width="800" height="534" alt="An electrician in a hard hat testing a meter box" loading="lazy" decoding="async"></div>
-          <figcaption>Illustrative photo</figcaption>
-        </figure>
+      <div class="hh">
+        <div class="therm rv" id="therm">
+          <svg viewBox="0 0 64 240" aria-hidden="true"><rect x="20" y="8" width="24" height="180" rx="12" fill="none" stroke="#eef1ee" stroke-width="2"/><circle cx="32" cy="208" r="24" fill="none" stroke="#eef1ee" stroke-width="2"/><circle cx="32" cy="208" r="16" fill="#e08a55"/><rect class="merc" x="27" y="40" width="10" height="168" rx="5" fill="#e08a55"/><path d="M44 50h8M44 80h6M44 110h8M44 140h6M44 170h8" stroke="#eef1ee" stroke-opacity=".5" stroke-width="2"/></svg>
+          <div class="big" aria-hidden="true">18<small>°C</small></div>
+        </div>
         <div>
-          <h3>What you get at the end</h3>
+          <p style="font-size:20px;color:var(--on-night)">Rental homes must have fixed heating that can warm the main living room to at least 18°C. A correctly sized heat pump is the usual way to meet it.</p>
           <ul class="ticks">
-            <li>A Certificate of Compliance for the electrical work</li>
-            <li>An Electrical Safety Certificate when new work is connected</li>
-            <li>Manufacturer warranty details for your heat pump</li>
-            <li>A tidy site, with offcuts and packaging taken away</li>
+            <li>We size the heat pump to the living room, not a rule of thumb</li>
+            <li>Install and electrical work done together, with certificates for your records</li>
+            <li>Servicing to keep it running between tenancies</li>
           </ul>
-          <p class="note" style="color:rgba(238,241,238,.7)" data-need="ewrb" ><span data-fact="ewrb"></span></p>
+          <div class="acts" style="justify-content:flex-start">
+            <a class="btn" href="contact.html">Ask about a rental</a>
+            <a class="tlink" href="https://www.tenancy.govt.nz/healthy-homes/heating-standard/" rel="noopener">Read the heating standard</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sec fed dark cv" aria-labelledby="where" style="padding-top:0">
+  <section class="sec fed cv" aria-labelledby="field">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="wire" aria-hidden="true"><i></i></span>
+        <h2 id="field">In the field</h2>
+        <p class="lede">The kind of work we do every week. Photos are illustrative until we add our own job photos.</p>
+      </div>
+      <div class="mosaic">
+        <figure class="wipe"><img src="assets/img/living-hp-800.webp" srcset="assets/img/living-hp-800.webp 800w, assets/img/living-hp-1600.webp 1600w" sizes="(max-width:860px) 92vw, 460px" width="800" height="1107" alt="A calm living room with a high-wall heat pump above a low cabinet" loading="lazy" decoding="async"><figcaption>High-wall units sit clear of curtains and furniture</figcaption></figure>
+        <figure class="wipe"><img src="assets/img/outdoor-bracket-800.webp" srcset="assets/img/outdoor-bracket-800.webp 800w, assets/img/outdoor-bracket-1600.webp 1600w" sizes="(max-width:860px) 46vw, 380px" width="800" height="533" alt="An outdoor heat pump unit mounted on a wall bracket under an eave" loading="lazy" decoding="async"><figcaption>Outdoor units on solid wall brackets</figcaption></figure>
+        <figure class="wipe"><img src="assets/img/testing-800.webp" srcset="assets/img/testing-800.webp 800w, assets/img/testing-1600.webp 1600w" sizes="(max-width:860px) 46vw, 380px" width="800" height="600" alt="An electrician testing circuit breakers with a meter" loading="lazy" decoding="async"><figcaption>Every circuit tested before sign-off</figcaption></figure>
+        <figure class="wipe"><img src="assets/img/outdoor-unit-800.webp" srcset="assets/img/outdoor-unit-800.webp 800w, assets/img/outdoor-unit-1600.webp 1600w" sizes="(max-width:860px) 46vw, 380px" width="800" height="544" alt="Close-up of an outdoor heat pump unit and its fan" loading="lazy" decoding="async"><figcaption>Outdoor coils cleaned as part of a service</figcaption></figure>
+        <figure class="wipe"><img src="assets/img/switchboard-800.webp" srcset="assets/img/switchboard-800.webp 800w, assets/img/switchboard-1600.webp 1600w" sizes="(max-width:860px) 46vw, 380px" width="800" height="1000" alt="A neatly wired switchboard with rows of circuit breakers" loading="lazy" decoding="async"><figcaption>Switchboards with room to grow</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec fed night cv" aria-labelledby="where">
     <div class="wrap">
       <div class="head rv">
         <span class="wire" aria-hidden="true"><i></i></span>
         <h2 id="where">Where we work</h2>
-        <p class="lede">Homes across the Waikato, from the river towns to the farms around them. Tell us your town and we will confirm.</p>
+        <p class="lede">Homes across the Waikato, from the river towns to the farms around them. Pick your town to start an enquiry.</p>
       </div>
       <div class="map-grid">
-        <svg class="map" viewBox="20 20 430 570" role="img" aria-label="Map of the Waikato showing the Waikato River and the main towns, with Hamilton at the centre">
+        <svg class="map" viewBox="20 20 430 570" role="group" aria-label="Map of the Waikato showing the Waikato River and the main towns. Each town opens an enquiry.">
           <g class="grid" aria-hidden="true">
             <line x1="20" y1="120" x2="450" y2="120"/><line x1="20" y1="240" x2="450" y2="240"/><line x1="20" y1="360" x2="450" y2="360"/><line x1="20" y1="480" x2="450" y2="480"/>
             <line x1="120" y1="20" x2="120" y2="590"/><line x1="240" y1="20" x2="240" y2="590"/><line x1="360" y1="20" x2="360" y2="590"/>
           </g>
-          <path class="river-bed" d="M398.4 554.4 C397.1 547.2 393.2 527.5 390.6 511.5 C388.0 495.6 391.5 477.9 382.8 458.7 C374.1 439.4 351.5 410.9 338.5 396.0 C325.5 381.1 313.4 376.8 304.7 369.6 C296.0 362.5 292.5 360.8 286.4 353.1 C280.3 345.4 273.0 331.1 268.2 323.4 C263.4 315.7 262.6 311.8 257.8 306.9 C253.0 301.9 247.0 298.6 239.6 293.7 C232.2 288.8 221.8 282.7 213.5 277.2 C205.2 271.7 197.5 267.3 190.1 260.7 C182.7 254.1 175.0 244.2 169.3 237.6 C163.7 231.0 157.9 229.9 156.2 221.1 C154.4 212.3 159.7 198.0 158.8 184.8 C157.9 171.6 154.0 154.6 151.0 141.9 C148.0 129.2 144.1 117.2 140.6 108.9 C137.1 100.7 136.3 95.7 130.2 92.4 C124.1 89.1 113.8 86.3 104.2 89.1 C94.7 91.8 82.9 102.3 72.9 108.9 C62.9 115.5 49.1 125.4 44.3 128.7"/>
-          <path class="river" pathLength="1100" d="M398.4 554.4 C397.1 547.2 393.2 527.5 390.6 511.5 C388.0 495.6 391.5 477.9 382.8 458.7 C374.1 439.4 351.5 410.9 338.5 396.0 C325.5 381.1 313.4 376.8 304.7 369.6 C296.0 362.5 292.5 360.8 286.4 353.1 C280.3 345.4 273.0 331.1 268.2 323.4 C263.4 315.7 262.6 311.8 257.8 306.9 C253.0 301.9 247.0 298.6 239.6 293.7 C232.2 288.8 221.8 282.7 213.5 277.2 C205.2 271.7 197.5 267.3 190.1 260.7 C182.7 254.1 175.0 244.2 169.3 237.6 C163.7 231.0 157.9 229.9 156.2 221.1 C154.4 212.3 159.7 198.0 158.8 184.8 C157.9 171.6 154.0 154.6 151.0 141.9 C148.0 129.2 144.1 117.2 140.6 108.9 C137.1 100.7 136.3 95.7 130.2 92.4 C124.1 89.1 113.8 86.3 104.2 89.1 C94.7 91.8 82.9 102.3 72.9 108.9 C62.9 115.5 49.1 125.4 44.3 128.7"/>
-          <path class="spark" pathLength="1100" d="M398.4 554.4 C397.1 547.2 393.2 527.5 390.6 511.5 C388.0 495.6 391.5 477.9 382.8 458.7 C374.1 439.4 351.5 410.9 338.5 396.0 C325.5 381.1 313.4 376.8 304.7 369.6 C296.0 362.5 292.5 360.8 286.4 353.1 C280.3 345.4 273.0 331.1 268.2 323.4 C263.4 315.7 262.6 311.8 257.8 306.9 C253.0 301.9 247.0 298.6 239.6 293.7 C232.2 288.8 221.8 282.7 213.5 277.2 C205.2 271.7 197.5 267.3 190.1 260.7 C182.7 254.1 175.0 244.2 169.3 237.6 C163.7 231.0 157.9 229.9 156.2 221.1 C154.4 212.3 159.7 198.0 158.8 184.8 C157.9 171.6 154.0 154.6 151.0 141.9 C148.0 129.2 144.1 117.2 140.6 108.9 C137.1 100.7 136.3 95.7 130.2 92.4 C124.1 89.1 113.8 86.3 104.2 89.1 C94.7 91.8 82.9 102.3 72.9 108.9 C62.9 115.5 49.1 125.4 44.3 128.7"/>
-          <g class="t" style="--d:0"><circle class="hub" cx="190.1" cy="260.7" r="9"/><text class="big" x="206" y="254">Hamilton</text></g>
-          <g class="t" style="--d:1"><circle cx="239.6" cy="293.7" r="5.5"/><text x="250" y="312">Cambridge</text></g>
-          <g class="t" style="--d:2"><circle cx="200.5" cy="333.3" r="5.5"/><text x="108" y="352">Te Awamutu</text></g>
-          <g class="t" style="--d:3"><circle cx="158.8" cy="184.8" r="5.5"/><text x="96" y="182">Huntly</text></g>
-          <g class="t" style="--d:4"><circle cx="156.2" cy="221.1" r="5.5"/><text x="42" y="226">Ngāruawāhia</text></g>
-          <g class="t" style="--d:5"><circle cx="83.3" cy="264" r="5.5"/><text x="36" y="290">Raglan</text></g>
-          <g class="t" style="--d:6"><circle cx="255.2" cy="217.8" r="5.5"/><text x="266" y="223">Morrinsville</text></g>
-          <g class="t" style="--d:7"><circle cx="317.7" cy="267.3" r="5.5"/><text x="328" y="272">Matamata</text></g>
-          <g class="t" style="--d:8"><circle cx="302.1" cy="178.2" r="5.5"/><text x="313" y="183">Te Aroha</text></g>
-          <g class="t" style="--d:9"><circle cx="257.8" cy="46.2" r="5.5"/><text x="269" y="51">Thames</text></g>
-          <g class="t" style="--d:10"><circle cx="291.6" cy="125.4" r="5.5"/><text x="252" y="112">Paeroa</text></g>
-          <g class="t" style="--d:11"><circle cx="335.9" cy="128.7" r="5.5"/><text x="347" y="133">Waihī</text></g>
-          <g class="t" style="--d:12"><circle cx="104.2" cy="85.8" r="5.5"/><text x="60" y="68">Tuakau</text></g>
-          <g class="t" style="--d:13"><circle cx="171.9" cy="392.7" r="5.5"/><text x="60" y="398">Ōtorohanga</text></g>
-          <g class="t" style="--d:14"><circle cx="158.8" cy="438.9" r="5.5"/><text x="78" y="458">Te Kūiti</text></g>
-          <g class="t" style="--d:15"><circle cx="320.3" cy="346.5" r="5.5"/><text x="332" y="351">Putāruru</text></g>
-          <g class="t" style="--d:16"><circle cx="343.7" cy="402.6" r="5.5"/><text x="356" y="407">Tokoroa</text></g>
-          <g class="t" style="--d:17"><circle cx="395.8" cy="557.7" r="5.5"/><text x="336" y="584">Taupō</text></g>
+          <path class="river-bed" aria-hidden="true" d="M398.4 554.4 C397.1 547.2 393.2 527.5 390.6 511.5 C388.0 495.6 391.5 477.9 382.8 458.7 C374.1 439.4 351.5 410.9 338.5 396.0 C325.5 381.1 313.4 376.8 304.7 369.6 C296.0 362.5 292.5 360.8 286.4 353.1 C280.3 345.4 273.0 331.1 268.2 323.4 C263.4 315.7 262.6 311.8 257.8 306.9 C253.0 301.9 247.0 298.6 239.6 293.7 C232.2 288.8 221.8 282.7 213.5 277.2 C205.2 271.7 197.5 267.3 190.1 260.7 C182.7 254.1 175.0 244.2 169.3 237.6 C163.7 231.0 157.9 229.9 156.2 221.1 C154.4 212.3 159.7 198.0 158.8 184.8 C157.9 171.6 154.0 154.6 151.0 141.9 C148.0 129.2 144.1 117.2 140.6 108.9 C137.1 100.7 136.3 95.7 130.2 92.4 C124.1 89.1 113.8 86.3 104.2 89.1 C94.7 91.8 82.9 102.3 72.9 108.9 C62.9 115.5 49.1 125.4 44.3 128.7"/>
+          <path class="river" aria-hidden="true" pathLength="1100" d="M398.4 554.4 C397.1 547.2 393.2 527.5 390.6 511.5 C388.0 495.6 391.5 477.9 382.8 458.7 C374.1 439.4 351.5 410.9 338.5 396.0 C325.5 381.1 313.4 376.8 304.7 369.6 C296.0 362.5 292.5 360.8 286.4 353.1 C280.3 345.4 273.0 331.1 268.2 323.4 C263.4 315.7 262.6 311.8 257.8 306.9 C253.0 301.9 247.0 298.6 239.6 293.7 C232.2 288.8 221.8 282.7 213.5 277.2 C205.2 271.7 197.5 267.3 190.1 260.7 C182.7 254.1 175.0 244.2 169.3 237.6 C163.7 231.0 157.9 229.9 156.2 221.1 C154.4 212.3 159.7 198.0 158.8 184.8 C157.9 171.6 154.0 154.6 151.0 141.9 C148.0 129.2 144.1 117.2 140.6 108.9 C137.1 100.7 136.3 95.7 130.2 92.4 C124.1 89.1 113.8 86.3 104.2 89.1 C94.7 91.8 82.9 102.3 72.9 108.9 C62.9 115.5 49.1 125.4 44.3 128.7"/>
+          <path class="spark" aria-hidden="true" pathLength="1100" d="M398.4 554.4 C397.1 547.2 393.2 527.5 390.6 511.5 C388.0 495.6 391.5 477.9 382.8 458.7 C374.1 439.4 351.5 410.9 338.5 396.0 C325.5 381.1 313.4 376.8 304.7 369.6 C296.0 362.5 292.5 360.8 286.4 353.1 C280.3 345.4 273.0 331.1 268.2 323.4 C263.4 315.7 262.6 311.8 257.8 306.9 C253.0 301.9 247.0 298.6 239.6 293.7 C232.2 288.8 221.8 282.7 213.5 277.2 C205.2 271.7 197.5 267.3 190.1 260.7 C182.7 254.1 175.0 244.2 169.3 237.6 C163.7 231.0 157.9 229.9 156.2 221.1 C154.4 212.3 159.7 198.0 158.8 184.8 C157.9 171.6 154.0 154.6 151.0 141.9 C148.0 129.2 144.1 117.2 140.6 108.9 C137.1 100.7 136.3 95.7 130.2 92.4 C124.1 89.1 113.8 86.3 104.2 89.1 C94.7 91.8 82.9 102.3 72.9 108.9 C62.9 115.5 49.1 125.4 44.3 128.7"/>
+          <a href="contact.html?town=Hamilton"><g class="t" style="--d:0"><circle class="hub" cx="190.1" cy="260.7" r="9"/><text class="bigt" x="206" y="254">Hamilton</text></g></a>
+          <a href="contact.html?town=Cambridge"><g class="t" style="--d:1"><circle cx="239.6" cy="293.7" r="5.5"/><text x="250" y="312">Cambridge</text></g></a>
+          <a href="contact.html?town=Te%20Awamutu"><g class="t" style="--d:2"><circle cx="200.5" cy="333.3" r="5.5"/><text x="108" y="352">Te Awamutu</text></g></a>
+          <a href="contact.html?town=Huntly"><g class="t" style="--d:3"><circle cx="158.8" cy="184.8" r="5.5"/><text x="96" y="182">Huntly</text></g></a>
+          <a href="contact.html?town=Ng%C4%81ruaw%C4%81hia"><g class="t" style="--d:4"><circle cx="156.2" cy="221.1" r="5.5"/><text x="42" y="226">Ngāruawāhia</text></g></a>
+          <a href="contact.html?town=Raglan"><g class="t" style="--d:5"><circle cx="83.3" cy="264" r="5.5"/><text x="36" y="290">Raglan</text></g></a>
+          <a href="contact.html?town=Morrinsville"><g class="t" style="--d:6"><circle cx="255.2" cy="217.8" r="5.5"/><text x="266" y="223">Morrinsville</text></g></a>
+          <a href="contact.html?town=Matamata"><g class="t" style="--d:7"><circle cx="317.7" cy="267.3" r="5.5"/><text x="328" y="272">Matamata</text></g></a>
+          <a href="contact.html?town=Te%20Aroha"><g class="t" style="--d:8"><circle cx="302.1" cy="178.2" r="5.5"/><text x="313" y="183">Te Aroha</text></g></a>
+          <a href="contact.html?town=Thames"><g class="t" style="--d:9"><circle cx="257.8" cy="46.2" r="5.5"/><text x="269" y="51">Thames</text></g></a>
+          <a href="contact.html?town=Paeroa"><g class="t" style="--d:10"><circle cx="291.6" cy="125.4" r="5.5"/><text x="252" y="112">Paeroa</text></g></a>
+          <a href="contact.html?town=Waih%C4%AB"><g class="t" style="--d:11"><circle cx="335.9" cy="128.7" r="5.5"/><text x="347" y="133">Waihī</text></g></a>
+          <a href="contact.html?town=Tuakau"><g class="t" style="--d:12"><circle cx="104.2" cy="85.8" r="5.5"/><text x="60" y="68">Tuakau</text></g></a>
+          <a href="contact.html?town=%C5%8Ctorohanga"><g class="t" style="--d:13"><circle cx="171.9" cy="392.7" r="5.5"/><text x="60" y="398">Ōtorohanga</text></g></a>
+          <a href="contact.html?town=Te%20K%C5%ABiti"><g class="t" style="--d:14"><circle cx="158.8" cy="438.9" r="5.5"/><text x="78" y="458">Te Kūiti</text></g></a>
+          <a href="contact.html?town=Put%C4%81ruru"><g class="t" style="--d:15"><circle cx="320.3" cy="346.5" r="5.5"/><text x="332" y="351">Putāruru</text></g></a>
+          <a href="contact.html?town=Tokoroa"><g class="t" style="--d:16"><circle cx="343.7" cy="402.6" r="5.5"/><text x="356" y="407">Tokoroa</text></g></a>
+          <a href="contact.html?town=Taup%C5%8D"><g class="t" style="--d:17"><circle cx="395.8" cy="557.7" r="5.5"/><text x="336" y="584">Taupō</text></g></a>
         </svg>
         <div>
           <h3>Not sure if you are in our patch?</h3>
-          <p style="color:rgba(238,241,238,.78)">Send us your address with your enquiry. If you are outside the area we usually cover, we will tell you straight away rather than keep you waiting.</p>
+          <p style="color:var(--on-night-2)">Pick your town on the map, or send us your address with your enquiry. If you are outside the area we usually cover, we will tell you straight away rather than keep you waiting.</p>
           <a class="btn" href="contact.html">Ask about your town</a>
         </div>
       </div>
@@ -297,12 +500,14 @@
     </div>
   </section>
 
-  <section class="cta" aria-labelledby="ctah">
+  <section class="getin" aria-labelledby="ctah">
     <div class="wrap">
-      <h2 id="ctah">Tell us about your home</h2>
+      <h2 id="ctah">Let's talk about your home</h2>
       <p>A few lines about the room, the house and your town is enough to get started. We will come back to you to arrange a visit.</p>
-      <a class="btn" href="contact.html">Get a quote</a><a class="tlink" href="#" data-href="tel" data-need="phone">Or call <span data-fact="phone"></span></a>
+      <div class="acts"><a class="btn" href="contact.html">Get a quote</a><a class="btn ghost" href="#" data-href="tel" data-need="phone">Call <span data-fact="phone"></span></a></div>
+      <div class="facts-row"><a href="#" data-fact="email" data-need="email"></a><span data-need="hours" data-fact="hours"></span></div>
     </div>
+    <svg class="cable" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C200 10 400 60 600 30S1000 10 1200 36" fill="none" stroke="#fff" stroke-width="2"/></svg>
   </section>
 </main>
 
@@ -330,7 +535,7 @@
   <a class="go" href="contact.html">Get a quote</a>
 </nav>
 
-<script src="assets/business.js?v=1" defer></script>
-<script src="assets/site.js?v=1" defer></script>
+<script src="assets/business.js?v=2" defer></script>
+<script src="assets/site.js?v=2" defer></script>
 </body>
 </html>

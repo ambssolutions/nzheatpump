@@ -7,7 +7,7 @@
 <meta name="description" content="Switchboard upgrades, new circuits, lighting, renovation wiring and fault finding for Waikato homes.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#13231f">
-<meta name="build" content="2026-10-20.1">
+<meta name="build" content="2026-10-20.2">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_NZ">
 <meta property="og:site_name" content="NZ Heat Pump Services">
@@ -18,8 +18,8 @@
 <link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css?v=1">
-<script>document.documentElement.classList.add("js")</script>
+<link rel="stylesheet" href="assets/site.css?v=2">
+<script>(function(d){var t;try{t=localStorage.getItem("nzhp-theme")}catch(e){}if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.setAttribute("data-theme",t);d.classList.add("js")})(document.documentElement)</script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "./"}, {"@type": "ListItem", "position": 2, "name": "Electrical", "item": "electrical.html"}]}
 </script>
@@ -41,8 +41,13 @@
       <a href="electrical.html" aria-current="page">Electrical</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
+      <button class="theme-btn in-nav" type="button" aria-pressed="false">Dark mode</button>
       <a class="btn" href="contact.html">Get a quote</a>
     </nav>
+    <button class="icon-btn theme-btn" type="button" aria-label="Switch between light and dark" aria-pressed="false">
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
     <a class="btn" href="contact.html">Get a quote</a>
     <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menu"><i></i><i></i><i></i></button>
   </div>
@@ -76,10 +81,16 @@
   <div class="acc-item"><h3><button class="acc-btn" aria-expanded="false" aria-controls="j6"><span><span class="no">06</span>Heat pump circuits</span></button></h3>
     <div class="acc-panel" id="j6"><div><div>Every heat pump we install gets the circuit it needs, and we can wire in a unit someone else has supplied.</div></div></div></div>
 </div>
+      <div class="mosaic row3" style="margin-top:clamp(40px,5vw,64px)">
+        <figure class="wipe"><img src="assets/img/testing-800.webp" srcset="assets/img/testing-800.webp 800w, assets/img/testing-1600.webp 1600w" sizes="(max-width:860px) 92vw, 380px" width="800" height="600" alt="An electrician testing circuit breakers with a meter" loading="lazy" decoding="async"><figcaption>Every circuit tested before sign-off</figcaption></figure>
+        <figure class="wipe"><img src="assets/img/cables-800.webp" srcset="assets/img/cables-800.webp 800w, assets/img/cables-1600.webp 1600w" sizes="(max-width:860px) 92vw, 380px" width="800" height="533" alt="A gloved hand holding a stripped electrical cable" loading="lazy" decoding="async"><figcaption>New circuits run neatly and labelled</figcaption></figure>
+        <figure class="wipe"><img src="assets/img/switchboard-800.webp" srcset="assets/img/switchboard-800.webp 800w, assets/img/switchboard-1600.webp 1600w" sizes="(max-width:860px) 92vw, 380px" width="800" height="1000" alt="A neatly wired switchboard with rows of circuit breakers" loading="lazy" decoding="async"><figcaption>Switchboards with room to grow</figcaption></figure>
+      </div>
+      <p class="cap center">Illustrative photos</p>
     </div>
   </section>
 
-  <section class="sec dark cv" aria-labelledby="papers">
+  <section class="sec night cv" aria-labelledby="papers">
     <div class="wrap">
       <div class="split rev">
         <figure>
@@ -88,24 +99,25 @@
         </figure>
         <div>
           <h2 id="papers">The paperwork you should get</h2>
-          <p style="color:rgba(238,241,238,.8)">Electrical work on your home must be done by a licensed electrician. When it is finished, the law requires a record of it.</p>
+          <p style="color:var(--on-night-2)">Electrical work on your home must be done by a licensed electrician. When it is finished, the law requires a record of it.</p>
           <ul class="ticks">
             <li><strong>Certificate of Compliance (CoC):</strong> records the work that was done and that it meets the standards.</li>
             <li><strong>Electrical Safety Certificate (ESC):</strong> confirms new work is safe to connect to supply.</li>
           </ul>
-          <p style="color:rgba(238,241,238,.8)">Keep both with your house documents. Insurers and future buyers may ask for them.</p>
-          <p class="note" style="color:rgba(238,241,238,.7)" data-need="ewrb"><span data-fact="ewrb"></span></p>
+          <p style="color:var(--on-night-2)">Keep both with your house documents. Insurers and future buyers may ask for them.</p>
+          <p class="note" style="color:var(--on-night-2)" data-need="ewrb"><span data-fact="ewrb"></span></p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="cta" aria-labelledby="ctah">
+  <section class="getin" aria-labelledby="ctah">
     <div class="wrap">
-      <h2 id="ctah">Tell us about your home</h2>
+      <h2 id="ctah">Let's talk about your home</h2>
       <p>A few lines about the room, the house and your town is enough to get started. We will come back to you to arrange a visit.</p>
-      <a class="btn" href="contact.html">Get a quote</a><a class="tlink" href="#" data-href="tel" data-need="phone">Or call <span data-fact="phone"></span></a>
+      <div class="acts"><a class="btn" href="contact.html">Get a quote</a><a class="btn ghost" href="#" data-href="tel" data-need="phone">Call <span data-fact="phone"></span></a></div>
     </div>
+    <svg class="cable" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C200 10 400 60 600 30S1000 10 1200 36" fill="none" stroke="#fff" stroke-width="2"/></svg>
   </section>
 </main>
 
@@ -133,7 +145,7 @@
   <a class="go" href="contact.html">Get a quote</a>
 </nav>
 
-<script src="assets/business.js?v=1" defer></script>
-<script src="assets/site.js?v=1" defer></script>
+<script src="assets/business.js?v=2" defer></script>
+<script src="assets/site.js?v=2" defer></script>
 </body>
 </html>

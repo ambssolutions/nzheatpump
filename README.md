@@ -7,7 +7,7 @@ Preview locally from this folder: `python3 -m http.server`, then open http://loc
 ## Pages
 | Page | What's on it |
 |---|---|
-| `index.html` | Frost-to-warm hero, the two trades, sizing for a Waikato winter, the "Too small / Sized right" room demo, how an install goes (sticky stacked cards), certificates, Waikato River service-area map, reviews (hidden until supplied), FAQ teaser, quote band |
+| `index.html` | Frost-to-warm hero with service rail, ticker, services showcase (six animated scenes), sizing for a Waikato winter with the "Too small / Sized right" room demo, how an install goes (sticky stacked cards), Healthy Homes heating for landlords, in-the-field photos, Waikato River map (towns link to the form), reviews (hidden until supplied), FAQ teaser, quote band |
 | `heat-pumps.html` | Types of heat pump (spec table), replacing an old unit, servicing and repairs, signs it needs a look |
 | `electrical.html` | Six electrical services (slow-fold cards), the CoC and ESC paperwork |
 | `faq.html` | Eight questions with `FAQPage` data |
@@ -22,8 +22,8 @@ Preview locally from this folder: `python3 -m http.server`, then open http://loc
 - `assets/img/`: WebP photos in `-800` and `-1600` sizes (illustrative stock photos from Unsplash) and `mark.svg` (placeholder favicon).
 - `vercel.json`: main-only deploys, clean URLs, security headers, `noindex` until launch.
 
-## Checks run (20 October 2026)
-- axe-core WCAG 2.2 AA on every page: 0 violations.
+## Checks run (20 October 2026, version 2)
+- axe-core WCAG 2.2 AA on every page, light and dark, phone and laptop: 0 violations.
 - No text overlap or horizontal scroll at 390×844, 1280×720, 1366×768, 1440×900 and 1536×864. No console errors or broken links.
 - Lighthouse, home page, local server with compression, middle of 3 runs: phone Performance 99 (FCP 0.8 s, LCP 1.8 s, TBT 0 ms, CLS 0), laptop 100 (LCP 0.5 s, CLS 0). Accessibility 100, Best Practices 100. SEO 63 only because the preview is `noindex` on purpose; it goes to 100 at launch.
 
