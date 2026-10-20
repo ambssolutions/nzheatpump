@@ -10,6 +10,7 @@
 <link rel="icon" href="../../assets/img/mark.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" imagesrcset="../../assets/img/living-hp-800.webp 800w, ../../assets/img/living-hp-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
 <style>
 @font-face{font-family:"Fraunces";font-weight:600 700;font-display:swap;src:url(../../assets/fonts/fraunces-latin.woff2) format("woff2")}
 @font-face{font-family:"Inter";font-weight:400 600;font-display:swap;src:url(../../assets/fonts/inter-latin.woff2) format("woff2")}
@@ -20,6 +21,7 @@
   --ink:#1d2430;--muted:#5a6271;--line:rgba(29,36,48,.12);--card:#fff;
   --cold:#4b8fd1;--hot:#e2642b;--hot-ink:#b5481a;
   --temp:color-mix(in oklab,var(--cold),var(--hot) calc(var(--w) * 100%));
+  --temp-ink:color-mix(in oklab,#265f96,#a8411a calc(var(--w) * 100%));
   --serif:"Fraunces",Georgia,serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
   --pad:clamp(20px,5.5vw,80px);--hh:76px;--ease:cubic-bezier(.2,.7,.2,1);
 }
@@ -69,36 +71,31 @@ h3{font-size:clamp(21px,1.8vw,26px);line-height:1.2}
 @media (min-width:901px){.nav .btn{display:none}}
 
 /* hero: heat pump + comfort dial */
-.hero{position:relative;min-height:min(100svh,1000px);padding:calc(var(--hh) + 20px) 0 60px;text-align:center;overflow:hidden}
-.hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero{position:relative;min-height:min(100svh,1000px);display:grid;grid-template-columns:minmax(0,1fr);place-items:center;padding:calc(var(--hh) + 10px) 0 40px;text-align:center;overflow:hidden}
 .frost-edge{position:absolute;inset:0;pointer-events:none;opacity:calc(1 - var(--w));transition:opacity .6s;background:
   radial-gradient(ellipse 40% 30% at 0% 0%,rgba(255,255,255,.95),transparent 70%),radial-gradient(ellipse 40% 30% at 100% 0%,rgba(255,255,255,.95),transparent 70%),
   radial-gradient(ellipse 35% 25% at 0% 100%,rgba(220,235,248,.9),transparent 70%),radial-gradient(ellipse 35% 25% at 100% 100%,rgba(220,235,248,.9),transparent 70%)}
-.unit{position:relative;width:min(520px,82vw);margin:8px auto 0}
-.unit .body{fill:#fff;stroke:rgba(29,36,48,.18);stroke-width:1.5}
-.unit .flap{transform-box:fill-box;transform-origin:top center;transform:scaleY(calc(1 + var(--w) * 1.6)) skewX(calc(var(--w) * -8deg));transition:transform 1.2s var(--ease)}
-.unit .led{fill:var(--temp)}
-.hero .wrap{position:relative}
+.hero .wrap{position:relative;width:100%}
 .hero h1{font-size:clamp(2.6rem,min(6.4vw,9vh),5.8rem);max-width:13ch;margin:18px auto .3em;text-wrap:balance}
 .hero h1 em{font-style:italic;color:var(--hot-ink)}
 .dial-row{display:flex;align-items:center;justify-content:center;gap:clamp(14px,3vw,34px);margin:6px auto 22px}
-.dial-wrap{position:relative;width:min(320px,58vw)}
+.dial-wrap{position:relative;width:min(380px,62vw);margin-bottom:26px}
 .dial{width:100%;height:auto;touch-action:none;cursor:grab}
 .dial:active{cursor:grabbing}
 .dial .track{fill:none;stroke:rgba(29,36,48,.1);stroke-width:18;stroke-linecap:round}
 .dial .fill{fill:none;stroke:url(#dg);stroke-width:18;stroke-linecap:round}
-.dial .face{fill:#fff;stroke:rgba(29,36,48,.08)}
+.dial .g-cool{mix-blend-mode:multiply;opacity:calc(.75 * (1 - var(--w)))}
+.dial .g-warm{mix-blend-mode:multiply;opacity:calc(.55 * var(--w))}
 .dial .tick{stroke:rgba(29,36,48,.25);stroke-width:2;stroke-linecap:round}
 .dial .knob{fill:#fff;stroke:var(--temp);stroke-width:4}
-.readout{position:absolute;inset:0;display:grid;place-content:center;pointer-events:none}
-.readout .t{font:600 clamp(64px,10vw,96px)/1 var(--serif);letter-spacing:-.04em;font-variant-numeric:tabular-nums;color:var(--ink)}
+.readout{position:absolute;left:50%;bottom:-4%;transform:translateX(-50%);display:flex;align-items:baseline;gap:10px;padding:10px 20px;border-radius:999px;background:#fff;box-shadow:0 10px 30px -14px rgba(29,36,48,.45);pointer-events:none;white-space:nowrap}
+.readout .t{font:600 clamp(34px,4vw,44px)/1 var(--serif);letter-spacing:-.04em;font-variant-numeric:tabular-nums;color:var(--ink)}
 .readout .t small{font-size:.38em;vertical-align:top;margin-left:2px}
-.readout .m{font:600 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--temp);margin-top:6px}
+.readout .m{font:600 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--temp-ink)}
 .dial-row>button{flex:none;width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:#fff;font:600 24px/1 var(--sans);color:var(--ink);cursor:pointer}
 .dial-row>button:hover{border-color:var(--hot)}
 .hero .lede{margin-bottom:24px}
-@media (max-height:900px) and (min-width:700px){.unit{width:380px}.dial-wrap{width:220px}.hero h1{margin-top:6px;font-size:clamp(2.4rem,min(5.6vw,8.4vh),5rem)}.hero{padding-top:calc(var(--hh) + 4px)}.hero .lede{margin-bottom:16px}.dial-row{margin:2px auto 14px}.readout .t{font-size:64px}}
-
+@media (max-height:900px) and (min-width:700px){
 /* sections */
 .sec{padding:clamp(80px,10vw,130px) 0}
 .head{text-align:center;max-width:800px;margin:0 auto clamp(40px,5vw,60px)}
@@ -209,6 +206,8 @@ h3{font-size:clamp(21px,1.8vw,26px);line-height:1.2}
 .qbar{display:none}
 @media (max-width:760px){.qbar{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:40;gap:8px;transform:translateY(140%);transition:transform .7s var(--ease)}.qbar.show{transform:none}.qbar a{flex:1;min-height:52px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-weight:600;text-decoration:none;background:#fff;box-shadow:0 0 0 1px var(--line)}.qbar a.go{background:var(--ink);color:#fff}.ftr{padding-bottom:calc(96px + env(safe-area-inset-bottom))}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}.on1{opacity:1}}
+@media (max-height:820px) and (min-width:700px){.dial-wrap{width:236px;margin-bottom:20px}.hero h1{font-size:clamp(2.2rem,min(5vw,7.4vh),4.4rem);margin-bottom:.15em}.readout{padding:7px 16px}.readout .t{font-size:30px}.hero .lede{margin-bottom:12px}.btn{min-height:50px}}
+@media (max-width:600px){.hero h1{font-size:clamp(2.1rem,9vw,2.8rem)}.dial-wrap{width:min(300px,58vw)}.dial-row>button{width:46px;height:46px}.dial-row{gap:10px}}
 </style>
 <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -223,23 +222,21 @@ h3{font-size:clamp(21px,1.8vw,26px);line-height:1.2}
 
 <main id="main">
   <section class="hero" id="hero" aria-labelledby="h1">
-    <canvas id="air" aria-hidden="true"></canvas>
     <div class="frost-edge" aria-hidden="true"></div>
     <div class="wrap">
-      <svg class="unit" viewBox="0 0 520 120" aria-hidden="true">
-        <rect class="body" x="10" y="10" width="500" height="86" rx="22"/>
-        <path d="M40 70H480" stroke="rgba(29,36,48,.08)" stroke-width="2"/>
-        <rect class="flap" x="40" y="88" width="440" height="12" rx="6" fill="#eef1f4" stroke="rgba(29,36,48,.15)"/>
-        <circle class="led" cx="470" cy="34" r="5"/>
-        <text x="40" y="40" font-family="Inter" font-size="13" font-weight="600" fill="rgba(29,36,48,.45)" letter-spacing="2">HEAT</text>
-      </svg>
       <h1 id="h1">Comfort, dialled in for <em>Waikato</em> homes</h1>
       <div class="dial-row">
       <button type="button" id="down" aria-label="Cooler">−</button>
       <div class="dial-wrap">
         <svg class="dial" id="dial" viewBox="0 0 300 300" role="slider" tabindex="0" aria-label="Room temperature" aria-valuemin="14" aria-valuemax="24" aria-valuenow="15" aria-valuetext="15 degrees">
           <defs><linearGradient id="dg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#4b8fd1"/><stop offset=".6" stop-color="#f0a35c"/><stop offset="1" stop-color="#e2642b"/></linearGradient></defs>
-          <circle class="face" cx="150" cy="150" r="118"/>
+          <clipPath id="win"><circle cx="150" cy="150" r="96"/></clipPath>
+          <g clip-path="url(#win)">
+            <image href="../../assets/img/living-hp-800.webp" x="40" y="40" width="220" height="304" preserveAspectRatio="xMidYMid slice"/>
+            <rect class="g-cool" x="40" y="40" width="220" height="220" fill="#8fbbe2"/>
+            <rect class="g-warm" x="40" y="40" width="220" height="220" fill="#f3a466"/>
+          </g>
+          <circle cx="150" cy="150" r="96" fill="none" stroke="#fff" stroke-width="4"/>
           <g id="ticks"></g>
           <path class="track" d="M68.5 231.5A115 115 0 1 1 231.5 231.5"/>
           <path class="fill" id="fill" d="M68.5 231.5A115 115 0 1 1 231.5 231.5" pathLength="100" stroke-dasharray="100" stroke-dashoffset="90"/>
@@ -375,20 +372,6 @@ h3{font-size:clamp(21px,1.8vw,26px);line-height:1.2}
   document.getElementById("up").addEventListener("click",function(){set(Math.round(cur)+1)});
   document.getElementById("down").addEventListener("click",function(){set(Math.round(cur)-1)});
   paint(15);if(!R)setTimeout(function(){set(21)},900);else set(21,true);
-
-  // warm air streaming from the unit: canvas particles, coloured by the dial, paused off screen
-  var cv=document.getElementById("air"),cx=cv.getContext("2d"),hero=document.getElementById("hero"),P=[],run=true,DPR=Math.min(devicePixelRatio||1,1.5),N=matchMedia("(pointer:coarse)").matches||navigator.hardwareConcurrency<=4?36:70,cw=0,ch=0,ux=0,uy=0;
-  function rs(){var b=hero.getBoundingClientRect();cw=b.width;ch=b.height;cv.width=cw*DPR;cv.height=ch*DPR;cx.setTransform(DPR,0,0,DPR,0,0);var u=document.querySelector(".unit").getBoundingClientRect();ux=u.left-b.left+u.width/2;uy=u.top-b.top+u.height*.85}
-  rs();addEventListener("resize",rs);
-  function spawn(p){p.x=ux+(Math.random()-.5)*Math.min(440,cw*.7);p.y=uy;p.vx=(Math.random()-.5)*.6;p.vy=.6+Math.random()*1.2;p.life=0;p.max=160+Math.random()*160;p.r=1.5+Math.random()*2.5;return p}
-  for(var k=0;k<N;k++){var p=spawn({});p.life=Math.random()*p.max;P.push(p)}
-  function frame(){if(run){var w=curW,sp=.6+w*1.6;
-    cx.clearRect(0,0,cw,ch);
-    var r=Math.round(75+(226-75)*w),g=Math.round(143+(100-143)*w),b=Math.round(209+(43-209)*w);
-    P.forEach(function(p){p.x+=p.vx*sp+Math.sin((p.y+p.life)*.02)*.4;p.y+=p.vy*sp;p.life+=sp;var a=Math.sin(Math.PI*p.life/p.max)*(.25+w*.35);
-      cx.fillStyle="rgba("+r+","+g+","+b+","+a.toFixed(3)+")";cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.283);cx.fill();if(p.life>p.max||p.y>ch)spawn(p)})}
-    requestAnimationFrame(frame)}
-  if(!R){if("IntersectionObserver" in window)new IntersectionObserver(function(es){run=es[0].isIntersecting}).observe(hero);document.addEventListener("visibilitychange",function(){run=!document.hidden});requestAnimationFrame(frame)}
 
   // sizing guide
   var sz=document.getElementById("sizer"),ar=document.getElementById("sz-area");

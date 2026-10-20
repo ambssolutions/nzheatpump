@@ -21,8 +21,11 @@ Open `/concepts` for the gallery (noindex). Each concept is one self-contained p
 | # | Concept | Type · Style | Motion |
 |---|---|---|---|
 | 01 | Thermal | Premium dark · Thermal camera lens over the house, drag-to-compare room | Interactive, highly animated |
-| 02 | Comfort Dial | Warm and homely · Thermostat dial warms the whole page, heat pump air particles | Interactive, animated |
-| 03 | Live Wire | Editorial trade · The current site at `/` | Animated |
+| 02 | Comfort Dial | Warm and homely · The dial is a window into a living room that warms as you turn it | Interactive, animated |
+| 03 | Blueprint | Technical drawing · A house cross-section that draws itself, with copper circuits and tappable rooms | Interactive, animated |
+| 04 | Live Wire | Editorial trade · The current site at `/` | Animated |
+
+No hero borrows from Delta Air (no heat pump unit graphic with a display, no form card or wave in the hero).
 
 When the client picks one, it becomes the site and the gallery is removed.
 
