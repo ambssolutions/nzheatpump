@@ -12,6 +12,9 @@ window.SITE = {
   hours: "",          // e.g. "Monday to Friday, 7.30am to 5pm"
   ewrb: "",           // electrical licence or company registration line, if they want it shown
 
+  // Heat pump brands the client installs, e.g. ["Daikin", "Mitsubishi Electric"]. Shown on the heat pumps page.
+  brands: [],
+
   // Real reviews only, with the customer's permission: { text: "…", name: "Sam, Cambridge" }
   reviews: [],
 

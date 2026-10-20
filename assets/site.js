@@ -33,6 +33,9 @@
     p.textContent = r.text; c.textContent = r.name; q.appendChild(p); q.appendChild(c); rl.appendChild(q);
   });
 
+  var bl = document.getElementById("brand-list");
+  if (bl && has(SITE.brands)) SITE.brands.forEach(function (n) { var li = document.createElement("li"); li.textContent = n; bl.appendChild(li); });
+
   // 2. header, menu, theme
   var hdr = document.querySelector(".hdr"), btn = document.querySelector(".menu-btn");
   function onScroll() { if (hdr) hdr.classList.toggle("solid", scrollY > 40); }
@@ -139,6 +142,25 @@
       }, { threshold: .5 });
       dio.observe(room);
     }
+  }
+
+  // 6b. rough sizing guide: area x watts per m2 x ceiling x location, shown as a range rounded to 0.5 kW
+  var sz = document.getElementById("sizer");
+  if (sz) {
+    var area = document.getElementById("sz-area"), aout = document.getElementById("sz-area-out"),
+        lo = document.getElementById("sz-lo"), hi = document.getElementById("sz-hi"),
+        arc = document.getElementById("sz-arc"), needle = document.getElementById("sz-needle");
+    function val(n) { var c = sz.querySelector('input[name="' + n + '"]:checked'); return c ? +c.value : 1; }
+    function r5(x) { return Math.max(2, Math.round(x * 2) / 2); }
+    function calc() {
+      var kw = +area.value * val("sz-ins") * val("sz-ceil") * val("sz-loc") / 1000, a = r5(kw * .9), b = r5(kw * 1.1);
+      if (b <= a) b = a + .5;
+      aout.textContent = area.value + " m²"; lo.textContent = a.toFixed(1); hi.textContent = b.toFixed(1);
+      var f = Math.min(1, Math.max(0, (kw - 2) / 12));
+      arc.setAttribute("stroke-dashoffset", String(100 - f * 100));
+      needle.style.transform = "rotate(" + (-90 + f * 180) + "deg)";
+    }
+    sz.addEventListener("input", calc); calc();
   }
 
   // 7. forms

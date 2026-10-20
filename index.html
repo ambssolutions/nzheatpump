@@ -365,6 +365,38 @@
           <p class="note">The room is an illustration, not a measurement. We size every install on site.</p>
         </div>
       </div>
+
+      <div class="sizer" id="sizer">
+        <div class="sizer-in">
+          <h3>Rough sizing guide</h3>
+          <p class="note" style="margin-bottom:18px">Four quick answers give a ballpark. Nothing is sent anywhere.</p>
+          <div class="sz-field">
+            <label for="sz-area">Room size <small>(square metres)</small></label>
+            <div class="sz-range"><input id="sz-area" type="range" min="8" max="80" step="1" value="25" aria-describedby="sz-area-out"><output id="sz-area-out" for="sz-area">25 m²</output></div>
+          </div>
+          <fieldset class="sz-field"><legend>Insulation</legend>
+            <div class="chips"><label><input type="radio" name="sz-ins" value="90"><span>Well insulated</span></label><label><input type="radio" name="sz-ins" value="110" checked><span>Some</span></label><label><input type="radio" name="sz-ins" value="140"><span>Little or none</span></label></div>
+          </fieldset>
+          <fieldset class="sz-field"><legend>Ceiling</legend>
+            <div class="chips"><label><input type="radio" name="sz-ceil" value="1" checked><span>Standard</span></label><label><input type="radio" name="sz-ceil" value="1.2"><span>High or raked</span></label></div>
+          </fieldset>
+          <fieldset class="sz-field"><legend>Where</legend>
+            <div class="chips"><label><input type="radio" name="sz-loc" value="1.1" checked><span>Inland, frosty</span></label><label><input type="radio" name="sz-loc" value="1"><span>Coastal</span></label></div>
+          </fieldset>
+        </div>
+        <div class="readout" aria-live="polite">
+          <span class="mono">Heating output, roughly</span>
+          <div class="kw"><span id="sz-lo">2.5</span><i>to</i><span id="sz-hi">3.5</span><small>kW</small></div>
+          <svg class="meter" viewBox="0 0 240 130" aria-hidden="true">
+            <path d="M20 120A100 100 0 0 1 220 120" fill="none" stroke="currentColor" stroke-opacity=".2" stroke-width="10" stroke-linecap="round"/>
+            <path id="sz-arc" d="M20 120A100 100 0 0 1 220 120" fill="none" stroke="var(--accent-hi)" stroke-width="10" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="70"/>
+            <line id="sz-needle" x1="120" y1="120" x2="120" y2="36" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="120" cy="120" r="7" fill="var(--accent-hi)"/>
+          </svg>
+          <p>A rough guide only. Windows, layout and how you use the room all change the answer, so we confirm it at the site visit.</p>
+          <a class="btn" href="contact.html" id="sz-go">Book a site visit</a>
+        </div>
+      </div>
     </div>
   </section>
 

@@ -17,12 +17,17 @@ The site is built and works today. Send these and they go in without a redesign.
 ## Nice to have
 | Need | Goes in |
 |---|---|
+| Check the rough sizing guide's settings suit how you size (watts per square metre for each insulation level, plus 20% for high ceilings and 10% for frosty inland spots) | `assets/site.js` section 6b, `index.html` sizing guide |
+
+### More
+| Need | Goes in |
+|---|---|
 | Photos of your own jobs, vans and team (we'll swap out the stock photos) | `assets/img/` |
 | Business address or base town, if you want it shown | `assets/business.js` `address` |
 | Hours | `assets/business.js` `hours` |
 | Licence or registration line you want shown (e.g. registered electrical business details) | `assets/business.js` `ewrb` |
 | Up to two customer reviews, with each customer's permission | `assets/business.js` `reviews` |
-| Heat pump brands you install, if you want them named | `heat-pumps.html` |
+| Heat pump brands you install, if you want them named | `assets/business.js` `brands` (turns on the brand chips on the heat pumps page) |
 | Whether site visits and quotes are free | `index.html`, `faq.html` |
 | Warranty you give on your own workmanship | `faq.html`, `index.html` install stage 04 |
 | A short story about who you are, for an About section | New section or page |
