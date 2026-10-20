@@ -196,6 +196,23 @@ h3{font-size:clamp(18px,1.5vw,21px);letter-spacing:-.01em;line-height:1.25}
 @media (max-width:600px){.ftr .cols{grid-template-columns:1fr 1fr}.ftr .cols>div:last-child{grid-column:1/-1}}
 .qbar{display:none}
 @media (max-width:760px){.qbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;padding-bottom:env(safe-area-inset-bottom);background:var(--deep);color:#fff;border-top:1px solid var(--line);transform:translateY(110%);transition:transform .7s var(--ease)}.qbar.show{transform:none}.qbar a{flex:1;min-height:56px;display:flex;align-items:center;justify-content:center;font:600 15px var(--mono);text-decoration:none}.qbar a.go{background:var(--cu);color:var(--cu-ink)}.ftr{padding-bottom:calc(84px + env(safe-area-inset-bottom))}}
+
+/* gradient atmosphere: soft copper and sky washes, fixed behind the page (no animation, no blur) */
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:
+  radial-gradient(55% 45% at 88% 4%,rgba(240,138,75,.34),transparent 70%),
+  radial-gradient(50% 44% at 0% 32%,rgba(91,141,214,.28),transparent 70%),
+  radial-gradient(55% 45% at 100% 96%,rgba(255,170,110,.3),transparent 70%),
+  radial-gradient(40% 35% at 14% 100%,rgba(120,170,230,.24),transparent 70%)}
+.hero{background:radial-gradient(ellipse 62% 52% at 50% 78%,rgba(240,138,75,.3),transparent 70%)}
+.hero h1 span{background:linear-gradient(90deg,#b4511d,#cf5a22 55%,#b4511d);-webkit-background-clip:text;background-clip:text;color:transparent}
+main>.sec:nth-of-type(odd){background:linear-gradient(180deg,rgba(255,255,255,0),rgba(140,180,230,.18) 50%,rgba(255,255,255,0))}
+.btn{background:linear-gradient(135deg,#f2914f,#dc6a32)}
+.btn.line{background:transparent}
+.out{background:radial-gradient(circle at 50% 30%,rgba(240,138,75,.16),transparent 65%)}
+.item:hover{background:linear-gradient(180deg,rgba(240,138,75,.1),rgba(240,138,75,0))}
+.cta{background:linear-gradient(180deg,rgba(255,255,255,0),rgba(240,138,75,.18) 60%,rgba(91,141,214,.12))}
+.ftr{background:linear-gradient(160deg,#0b2a4a 0%,#123c66 60%,#0e3155 100%)}
+.qbar a.go{background:linear-gradient(135deg,#f2914f,#dc6a32)}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}}
 </style>
 <script>document.documentElement.classList.add("js")</script>
