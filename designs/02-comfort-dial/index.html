@@ -95,7 +95,8 @@ h3{font-size:clamp(21px,1.8vw,26px);line-height:1.2}
 .dial-row>button{flex:none;width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:#fff;font:600 24px/1 var(--sans);color:var(--ink);cursor:pointer}
 .dial-row>button:hover{border-color:var(--hot)}
 .hero .lede{margin-bottom:24px}
-@media (max-height:900px) and (min-width:700px){
+@media (max-height:900px) and (min-width:700px){.dial-wrap{width:300px}.hero h1{margin-top:6px;font-size:clamp(2.4rem,min(5.6vw,8.4vh),5rem)}.hero{padding-top:calc(var(--hh) + 4px)}.hero .lede{margin-bottom:16px}.dial-row{margin:2px auto 14px}}
+
 /* sections */
 .sec{padding:clamp(80px,10vw,130px) 0}
 .head{text-align:center;max-width:800px;margin:0 auto clamp(40px,5vw,60px)}
@@ -114,6 +115,7 @@ h3{font-size:clamp(21px,1.8vw,26px);line-height:1.2}
 .tile p{color:var(--muted);max-width:32ch;margin:0 auto 14px}
 .tile .tlink{margin-top:4px}
 .span2{grid-column:span 2}.row2{grid-row:span 2}
+@media (min-width:981px){.wide{grid-column:span 4}}
 .tile .big-ic{width:76px;height:76px;margin-bottom:16px}
 .tile .big-ic .l{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .tile .big-ic .h{stroke:var(--hot)}
@@ -260,7 +262,7 @@ h3{font-size:clamp(21px,1.8vw,26px);line-height:1.2}
         <div class="tile rv" style="--rd:.16s"><svg class="big-ic" viewBox="0 0 48 48" aria-hidden="true"><rect class="l" x="8" y="4" width="32" height="40" rx="6"/><path class="l" d="M14 22a10 10 0 0 1 20 0"/><path class="l h" d="M24 22l5-8"/><circle cx="24" cy="34" r="3" fill="#e2642b" class="on1"/></svg><h3>Repairs</h3><p>Error codes, leaks and weak airflow, found and fixed.</p><a class="tlink" href="../../heat-pumps.html#servicing">Repairs</a></div>
         <a class="tile ph rv" href="../../electrical.html" style="text-decoration:none"><img src="../../assets/img/switchboard-800.webp" width="800" height="1000" alt="A neatly wired switchboard" loading="lazy"><div><h3>Switchboards</h3><p>Breakers and RCD protection with room to grow.</p></div></a>
         <div class="tile rv" style="--rd:.08s"><svg class="big-ic" viewBox="0 0 48 48" aria-hidden="true"><path class="l" d="M24 2v12M14 22l4-8h12l4 8z"/><path class="on1" style="fill:rgba(226,100,43,.25)" d="M14 22L6 46h36l-8-24z"/></svg><h3>Lighting</h3><p>Downlights, pendants and outdoor lights.</p><a class="tlink" href="../../electrical.html">Lighting</a></div>
-        <a class="tile ph span2 rv" href="../../electrical.html" style="text-decoration:none"><img src="../../assets/img/testing-800.webp" srcset="../../assets/img/testing-800.webp 800w, ../../assets/img/testing-1600.webp 1600w" sizes="(max-width:980px) 92vw, 600px" width="800" height="600" alt="An electrician testing circuit breakers" loading="lazy"><div><h3>New circuits and power points</h3><p>Power where you need it, tested and certified.</p></div></a>
+        <a class="tile ph span2 wide rv" href="../../electrical.html" style="text-decoration:none"><img src="../../assets/img/testing-800.webp" srcset="../../assets/img/testing-800.webp 800w, ../../assets/img/testing-1600.webp 1600w" sizes="(max-width:980px) 92vw, 1100px" width="800" height="600" alt="An electrician testing circuit breakers" loading="lazy"><div><h3>New circuits and power points</h3><p>Power where you need it, tested and certified.</p></div></a>
       </div>
       <p class="center" style="text-align:center;font-size:13px;color:var(--muted);margin-top:14px">Illustrative photos</p>
     </div>
