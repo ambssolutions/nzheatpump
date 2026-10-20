@@ -32,5 +32,6 @@ Built by AMBS Solutions. Follow the **ambs-website-design** skill. These are the
 - **Fonts:** self-hosted in `assets/fonts/` (Archivo 700 with width 75–90, IBM Plex Sans 400–600), both preloaded.
 - **Form endpoint:** none yet. Set `formEndpoint` (and `web3formsKey`) in `assets/business.js`.
 - **Languages:** English (NZ).
+- **Home page:** `/` is the concept gallery for now (`/concepts` redirects to it). The Live Wire homepage is `designs/04-live-wire/index.html`, and the inner pages link home to it. When the client picks a concept, that concept becomes `/`.
 - **Indexing:** the preview is `noindex` (meta tag, `X-Robots-Tag`, robots.txt) until launch.
 - **Things to finish before launch:** see README.md.

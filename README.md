@@ -16,7 +16,7 @@ Preview locally from this folder: `python3 -m http.server`, then open http://loc
 | `404.html` | Not-found page |
 
 ## Concepts
-Open `/concepts` for the gallery (noindex). Each concept is one self-contained page that shares `assets/`:
+The home page (`/`) is the concept gallery (noindex). `/concepts` redirects there. The Live Wire homepage lives at `/designs/04-live-wire/`. Each concept is one self-contained page that shares `assets/`:
 
 | # | Concept | Type · Style | Motion |
 |---|---|---|---|
