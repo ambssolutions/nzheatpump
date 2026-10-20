@@ -23,7 +23,8 @@ The home page (`/`) is the concept gallery (noindex). `/concepts` redirects ther
 | 01 | Thermal | Premium dark · Thermal camera lens over the house, drag-to-compare room | Interactive, highly animated |
 | 02 | Comfort Dial | Warm and homely · The dial is a window into a living room that warms as you turn it | Interactive, animated |
 | 03 | Blueprint | Technical drawing · A house cross-section that draws itself, with copper circuits and tappable rooms | Interactive, animated |
-| 04 | Live Wire | Editorial trade · The current site at `/` | Animated |
+| 04 | Live Wire | Editorial trade · Copper wire, at `/designs/04-live-wire/`, with the inner pages in this style | Animated |
+| 05 | Seasons | Cut paper · A Waikato landscape that pops up like a book, with a winter and summer switch. Display font Bricolage Grotesque (`assets/fonts/bricolage-latin.woff2`, OFL) | Interactive, animated |
 
 No hero borrows from Delta Air (no heat pump unit graphic with a display, no form card or wave in the hero).
 
