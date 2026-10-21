@@ -103,7 +103,7 @@ h3{font-size:clamp(19px,1.7vw,23px);letter-spacing:-.01em;line-height:1.25}
 .callout .co-h{margin:4px 0 4px;font:600 16px/1.25 var(--mono);color:var(--ink)}
 .callout p{margin:0 0 6px;color:var(--muted);font-size:14.5px;line-height:1.4}
 .callout a{font-size:15px}
-@media (min-width:1000px){.sheet{left:-144px}.callout{left:calc(100% + 18px);right:auto;top:20px;width:270px}}
+@media (min-width:1000px){.sheet{left:-144px;width:min(calc(100% - 300px),1080px,calc((100svh - var(--hh) - 362px) * 1.8))}.callout{left:calc(100% + 18px);right:auto;top:20px;width:270px}}
 @media (max-width:760px){.sheet{width:100%}.callout{position:static;width:auto;margin-top:12px}.hs{width:28px;height:28px;margin:-14px 0 0 -14px;font-size:12px}}
 @media (prefers-reduced-motion:reduce){.hs,.callout{transform:none!important;opacity:1!important}}
 

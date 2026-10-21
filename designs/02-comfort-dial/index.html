@@ -365,15 +365,17 @@ h3{font-size:clamp(21px,1.8vw,26px);line-height:1.2}
     fill.setAttribute("stroke-dashoffset",String(100-f*100));knob.setAttribute("cx",150+115*Math.cos(a));knob.setAttribute("cy",150+115*Math.sin(a));
     curW=Math.max(0,Math.min(1,(t-15)/7));root.style.setProperty("--w",curW.toFixed(3));
     var r=Math.round(t);tv.textContent=r;tm.textContent=mode(t);dial.setAttribute("aria-valuenow",r);dial.setAttribute("aria-valuetext",r+" degrees, "+mode(t).toLowerCase())}
-  function set(t,instant){cur=Math.max(MIN,Math.min(MAX,t));if(instant||R){shown=cur;paint(shown)}}
-  (function anim(){shown+=(cur-shown)*.08;if(Math.abs(cur-shown)<.01)shown=cur;paint(shown);requestAnimationFrame(anim)})();
+  // ease towards the set temperature, and stop the loop once it settles
+  var running=false;
+  function anim(){shown+=(cur-shown)*.11;if(Math.abs(cur-shown)<.01)shown=cur;paint(shown);if(shown!==cur)requestAnimationFrame(anim);else running=false}
+  function set(t,instant){cur=Math.max(MIN,Math.min(MAX,t));if(instant||R){shown=cur;paint(shown);return}if(!running){running=true;requestAnimationFrame(anim)}}
   function fromPointer(e){var b=dial.getBoundingClientRect(),dx=e.clientX-(b.left+b.width/2),dy=e.clientY-(b.top+b.height/2),deg=Math.atan2(dy,dx)*180/Math.PI;deg=(deg-135+720)%360;if(deg>270)deg=deg>315?0:270;set(MIN+deg/270*(MAX-MIN))}
   var drag=false;dial.addEventListener("pointerdown",function(e){drag=true;dial.setPointerCapture(e.pointerId);fromPointer(e)});
   dial.addEventListener("pointermove",function(e){if(drag)fromPointer(e)});dial.addEventListener("pointerup",function(){drag=false});
   dial.addEventListener("keydown",function(e){if(e.key==="ArrowRight"||e.key==="ArrowUp"){set(Math.round(cur)+1);e.preventDefault()}if(e.key==="ArrowLeft"||e.key==="ArrowDown"){set(Math.round(cur)-1);e.preventDefault()}});
   document.getElementById("up").addEventListener("click",function(){set(Math.round(cur)+1)});
   document.getElementById("down").addEventListener("click",function(){set(Math.round(cur)-1)});
-  paint(15);if(!R)setTimeout(function(){set(21)},900);else set(21,true);
+  paint(15);if(!R)setTimeout(function(){set(21)},350);else set(21,true);
 
   // sizing guide
   var sz=document.getElementById("sizer"),ar=document.getElementById("sz-area");
