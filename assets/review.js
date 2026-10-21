@@ -95,7 +95,8 @@
       frame.width = dv[0]; frame.height = dv[1]; frame.title = CONCEPTS[cur][1] + " at " + dv[2].toLowerCase() + " size";
       stage.setAttribute("aria-label", dv[2] + " preview, " + dv[0] + " by " + dv[1]);
       cap.textContent = dv[2].toUpperCase() + "  " + dv[0] + " × " + dv[1];
-      var src = location.pathname + location.search;
+      // its own address, so a copy the browser saved before framing was allowed is never reused
+      var src = location.pathname + (location.search ? location.search + "&" : "?") + "preview=" + d;
       if (frame.getAttribute("src") !== src) frame.setAttribute("src", src);
       stage.classList.add("open"); document.documentElement.classList.add("rvs-lock");
       history.replaceState(null, "", location.pathname + location.search + "#preview=" + d);
