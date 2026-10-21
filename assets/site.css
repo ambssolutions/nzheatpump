@@ -91,7 +91,8 @@ html[data-theme=dark] .icon-btn .moon{display:none}
 
 /* Hero: frost clears, the house warms, the headline warms word by word */
 .hero{position:relative;min-height:600px;height:min(100svh,960px);display:flex;flex-direction:column;justify-content:center;text-align:center;color:#fff;overflow:hidden;background:#1d2a27}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 60%}
+.hero>picture{display:contents}
+.hero>img,.hero>picture>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 60%}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,20,18,.62) 0%,rgba(10,20,18,.32) 40%,rgba(10,20,18,.82) 100%)}
 .hero .frost,.hero .warm{position:absolute;inset:0;z-index:1;pointer-events:none}
 .hero .frost{opacity:0;background:
@@ -126,7 +127,7 @@ html[data-theme=dark].js .phero h1 .w>i{color:#5d6b67}
 .rail a b{font:700 15px/1 var(--serif);font-stretch:80%;color:var(--accent-hi)}
 .rail a:hover{background:rgba(255,255,255,.08);color:#fff}
 @media (max-width:1000px){.rail ol{grid-template-columns:repeat(3,1fr)}.rail li:nth-child(4){border-left:0}.rail li:nth-child(n+4){border-top:1px solid rgba(255,255,255,.14)}.rail a{padding:12px 10px;font-size:14px}}
-@media (max-width:600px){.rail{display:none}.hero .btn{width:100%}.hero .acts{flex-direction:column}.hero>img{object-position:30% 55%}}
+@media (max-width:600px){.rail{display:none}.hero .btn{width:100%}.hero .acts{flex-direction:column}.hero>img{object-position:30% 55%}.hero>picture>img{object-position:50% 55%}}
 .hero.has-rail .wrap{padding-bottom:110px}
 @media (max-width:1000px){.hero.has-rail .wrap{padding-bottom:140px}}
 @media (max-width:600px){.hero.has-rail .wrap{padding-bottom:40px}}

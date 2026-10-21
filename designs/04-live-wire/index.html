@@ -18,7 +18,8 @@
 <link rel="icon" href="../../assets/img/mark.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../../assets/fonts/plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" imagesrcset="../../assets/img/dusk-home-800.webp 800w, ../../assets/img/dusk-home-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" href="../../assets/img/dusk-home-tall-480.webp" media="(max-width:600px)" fetchpriority="high">
+<link rel="preload" as="image" imagesrcset="../../assets/img/dusk-home-800.webp 800w, ../../assets/img/dusk-home-1600.webp 1600w" imagesizes="100vw" media="(min-width:601px)" fetchpriority="high">
 <link rel="stylesheet" href="../../assets/site.css?v=2">
 <script>(function(d){var t;try{t=localStorage.getItem("nzhp-theme")}catch(e){}if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.setAttribute("data-theme",t);d.classList.add("js")})(document.documentElement)</script>
 <script type="application/ld+json">
@@ -53,7 +54,7 @@
 
 <main id="main">
   <section class="hero has-rail" aria-labelledby="h1">
-    <img src="../../assets/img/dusk-home-1600.webp" srcset="../../assets/img/dusk-home-800.webp 800w, ../../assets/img/dusk-home-1600.webp 1600w" sizes="100vw" width="1600" height="1067" alt="A modern home at dusk with warm light in every window" fetchpriority="high" decoding="async">
+    <picture><source media="(max-width:600px)" srcset="../../assets/img/dusk-home-tall-480.webp" width="480" height="960"><img src="../../assets/img/dusk-home-1600.webp" srcset="../../assets/img/dusk-home-800.webp 800w, ../../assets/img/dusk-home-1600.webp 1600w" sizes="100vw" width="1600" height="1067" alt="A modern home at dusk with warm light in every window" fetchpriority="high" decoding="async"></picture>
     <div class="frost" aria-hidden="true"></div><div class="warm" aria-hidden="true"></div>
     <div class="wrap">
       <h1 id="h1" aria-label="Warm homes and sound wiring across the Waikato">Warm homes and sound wiring across the Waikato</h1>
@@ -569,6 +570,6 @@
 
 <script src="../../assets/business.js?v=2" defer></script>
 <script src="../../assets/site.js?v=2" defer></script>
-<script src="../../assets/review.js" defer></script>
+<script>addEventListener("load",function(){var s=document.createElement("script");s.src="../../assets/review.js";document.body.appendChild(s)})</script>
 </body>
 </html>
