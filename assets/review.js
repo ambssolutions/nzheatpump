@@ -33,7 +33,7 @@
     ".rvb .menu a[aria-current]{background:rgba(255,176,112,.16);color:#ffb070}",
     ".rvb .dev[aria-pressed=true]{background:#f3f3f6;color:#14161c}",
     ".rvb .devs{display:flex;gap:2px}",
-    "@media (max-width:1099px){.rvb .devs,.rvb .sep.d{display:none}}",
+    "@media (max-width:999px){.rvb .devs,.rvb .sep.d{display:none}}",
     "@media (max-width:760px){.rvb{bottom:calc(84px + env(safe-area-inset-bottom));left:10px}.rvb .nm span,.rvb .all span{display:none}}",
     ".rvs{position:fixed;inset:0;z-index:8999;display:none;align-items:center;justify-content:center;background:#0b0c10}",
     ".rvs.open{display:flex}",
@@ -84,7 +84,7 @@
     box.style.transform = "scale(" + s + ")";
   }
   function setMode(d) {
-    if (d !== "desktop" && innerWidth < 1100) d = "desktop";
+    if (d !== "desktop" && innerWidth < 1000) d = "desktop";
     mode = d;
     [].forEach.call(bar.querySelectorAll(".dev"), function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-d") === d)); });
     if (d === "desktop") {
@@ -104,7 +104,7 @@
     relink();
   }
   [].forEach.call(bar.querySelectorAll(".dev"), function (b) { b.addEventListener("click", function () { setMode(b.getAttribute("data-d")); }); });
-  addEventListener("resize", function () { if (mode !== "desktop" && innerWidth < 1100) setMode("desktop"); else fit(); });
+  addEventListener("resize", function () { if (mode !== "desktop" && innerWidth < 1000) setMode("desktop"); else fit(); });
   addEventListener("keydown", function (e) {
     if (e.key === "Escape") { if (mode !== "desktop") setMode("desktop"); var dt = bar.querySelector("details"); if (dt.open) dt.open = false; }
   });
