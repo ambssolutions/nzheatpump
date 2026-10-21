@@ -109,6 +109,14 @@
     if (e.key === "Escape") { if (mode !== "desktop") setMode("desktop"); var dt = bar.querySelector("details"); if (dt.open) dt.open = false; }
   });
   document.addEventListener("click", function (e) { var dt = bar.querySelector("details"); if (dt.open && !dt.contains(e.target)) dt.open = false; });
+  // sit above anything the page pins to the bottom edge (Live Wire's service rail) while it is in view
+  var rail = document.querySelector(".rail");
+  function lift() {
+    var b = 16;
+    if (rail && innerWidth > 760) { var r = rail.getBoundingClientRect(); if (r.height && r.top < innerHeight && r.bottom > innerHeight - 4) b = innerHeight - r.top + 12; }
+    bar.style.bottom = innerWidth > 760 ? b + "px" : "";
+  }
+  lift(); addEventListener("resize", lift); [600, 1600, 3200].forEach(function (t) { setTimeout(lift, t); });
   // slide away while scrolling down to read, come back on the way up
   var lastY = scrollY, ticking = false;
   addEventListener("scroll", function () {
@@ -116,7 +124,7 @@
     requestAnimationFrame(function () {
       var y = scrollY, dt = bar.querySelector("details");
       if (!dt.open && !bar.contains(document.activeElement)) bar.classList.toggle("away", y > lastY && y > 200);
-      lastY = y; ticking = false;
+      lift(); lastY = y; ticking = false;
     });
   }, { passive: true });
   bar.addEventListener("focusin", function () { bar.classList.remove("away"); });
