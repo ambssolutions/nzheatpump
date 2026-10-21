@@ -30,6 +30,8 @@ No hero borrows from Delta Air (no heat pump unit graphic with a display, no for
 
 When the client picks one, it becomes the site and the gallery is removed.
 
+Each concept page carries a small review bar (`assets/review.js`): previous/next and a list to switch concepts, a link back to the gallery, and on laptops Desktop / Tablet / Phone buttons that show the page in a frame at 820×1180 or 390×844. It hides inside that frame, slides away while scrolling down, and is removed at launch.
+
 ## Files
 - `assets/business.js`: the one place for phone, email, address, hours, licence line, reviews and the form endpoint. Empty values stay hidden on the site.
 - `assets/site.css`, `assets/site.js`: shared styles and behaviour (menu, quick bar, folds, form, sizing demo, reveals).
@@ -52,3 +54,4 @@ When the client picks one, it becomes the site and the gallery is removed.
 7. Real favicon and share image from the logo.
 8. Permission for any reviews and job photos used.
 9. Run the speed check again on the live site.
+10. Remove the concept review bar: `assets/review.js` and its `<script>` tag in each `designs/*/index.html`.
